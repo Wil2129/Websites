@@ -221,6 +221,8 @@ export_route('iot', '/iot/')
 export_route('iot_download', '/iot/download/')
 export_route('security', '/security/')
 export_route('sponsors', '/sponsors/')
+export_route('alt', '/alt/')
+export_route('alt_download', '/alt/download/')
 
 # This is manually updated for now by calling:
 # python scripts/releases-json.py > static/releases.json
