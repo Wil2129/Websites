@@ -32,110 +32,110 @@
       <div class="col-12">
         <ul class="list-group">
 
-          {% if releaseinfo.ga.editions.server.download_override.standard_aarch64 %}
+          {% if releaseinfo.ga.alt.server.download_override.standard_aarch64 %}
             <li class="list-group-item d-flex align-items-center">
               <div class="flex-grow-1">
-                {% trans trimmed n=releaseinfo.ga.editions.server.release_number %}
+                {% trans trimmed n=releaseinfo.ga.alt.server.release_number %}
                 Fedora Server {{n}}: Standard ISO image for aarch64
                 {% endtrans %}
               </div>
               <div>
-                <a class="btn btn-outline-fedora-blue" href="{{dl(releaseinfo.ga.editions.server.download_override.standard_aarch64, 'https://download.fedoraproject.org/pub/fedora/linux/releases/%d/Server/aarch64/iso/Fedora-Server-dvd-aarch64-%d-%s.iso' % (releaseinfo.ga.editions.server.release_number, releaseinfo.ga.editions.server.release_number, releaseinfo.ga.editions.server.rc_version))}}">{% trans trimmed %}Download{% endtrans %}</a>
+                <a class="btn btn-outline-fedora-blue" href="{{dl(releaseinfo.ga.alt.server.download_override.standard_aarch64, 'https://download.fedoraproject.org/pub/fedora/linux/releases/%d/Server/aarch64/iso/Fedora-Server-dvd-aarch64-%d-%s.iso' % (releaseinfo.ga.alt.server.release_number, releaseinfo.ga.alt.server.release_number, releaseinfo.ga.alt.server.rc_version))}}">{% trans trimmed %}Download{% endtrans %}</a>
               </div>
             </li>
             {% endif %}
 
-            {% if releaseinfo.ga.editions.server.download_override.netinst_aarch64 %}
+            {% if releaseinfo.ga.alt.server.download_override.netinst_aarch64 %}
             <li class="list-group-item d-flex align-items-center">
               <div class="flex-grow-1">
-                {% trans trimmed n=releaseinfo.ga.editions.server.release_number %}
+                {% trans trimmed n=releaseinfo.ga.alt.server.release_number %}
                 Fedora Server {{n}}: Netinstall ISO image for aarch64
                 {% endtrans %}
               </div>
               <div>
-                <a class="btn btn-outline-fedora-blue" href="{{dl(releaseinfo.ga.editions.server.download_override.netinst_aarch64, 'https://download.fedoraproject.org/pub/fedora/linux/releases/%d/Server/aarch64/iso/Fedora-Server-netinst-aarch64-%d-%s.iso' % (releaseinfo.ga.editions.server.release_number, releaseinfo.ga.editions.server.release_number, releaseinfo.ga.editions.server.rc_version))}}">{% trans trimmed %}Download{% endtrans %}</a>
+                <a class="btn btn-outline-fedora-blue" href="{{dl(releaseinfo.ga.alt.server.download_override.netinst_aarch64, 'https://download.fedoraproject.org/pub/fedora/linux/releases/%d/Server/aarch64/iso/Fedora-Server-netinst-aarch64-%d-%s.iso' % (releaseinfo.ga.alt.server.release_number, releaseinfo.ga.alt.server.release_number, releaseinfo.ga.alt.server.rc_version))}}">{% trans trimmed %}Download{% endtrans %}</a>
               </div>
             </li>
             {% endif %}
 
-            {% if releaseinfo.ga.editions.workstation.download_override.netinst_aarch64 %}
+            {% if releaseinfo.ga.alt.workstation.download_override.netinst_aarch64 %}
               <li class="list-group-item d-flex align-items-center">
                 <div class="flex-grow-1">
-                  {% trans trimmed n=releaseinfo.ga.editions.workstation.release_number %}
+                  {% trans trimmed n=releaseinfo.ga.alt.workstation.release_number %}
                   Fedora Workstation {{n}}: Raw image for aarch64
                   {% endtrans %}
                 </div>
                 <div class="btn-group">
-                  <a class="btn btn-outline-fedora-blue" href="{{dl(releaseinfo.ga.editions.workstation.download_override.netinst_aarch64, 'https://download.fedoraproject.org/pub/fedora-secondary/releases/%d/Workstation/aarch64/images/Fedora-Workstation-%d-%s.aarch64.raw.xz' % (releaseinfo.ga.editions.workstation.release_number, releaseinfo.ga.editions.workstation.release_number, releaseinfo.ga.editions.workstation.rc_version))}}">
+                  <a class="btn btn-outline-fedora-blue" href="{{dl(releaseinfo.ga.alt.workstation.download_override.netinst_aarch64, 'https://download.fedoraproject.org/pub/fedora-secondary/releases/%d/Workstation/aarch64/images/Fedora-Workstation-%d-%s.aarch64.raw.xz' % (releaseinfo.ga.alt.workstation.release_number, releaseinfo.ga.alt.workstation.release_number, releaseinfo.ga.alt.workstation.rc_version))}}">
                     {% trans trimmed %}Download{% endtrans %}
                   </a>
                 </div>
               </li>
               {% endif %}
 
-              {% if releaseinfo.ga.editions.minimal.download_override.raw_aarch64 %}
+              {% if releaseinfo.ga.alt.minimal.download_override.raw_aarch64 %}
               <li class="list-group-item d-flex align-items-center">
                 <div class="flex-grow-1">
-                  {% trans trimmed n=releaseinfo.ga.editions.minimal.release_number %}
+                  {% trans trimmed n=releaseinfo.ga.alt.minimal.release_number %}
                   Fedora Minimal {{n}}: Raw image for aarch64
                   {% endtrans %}
                 </div>
                 <div class="btn-group">
-                  <a class="btn btn-outline-fedora-blue" href="{{dl(releaseinfo.ga.editions.minimal.download_override.raw_aarch64, 'https://download.fedoraproject.org/pub/fedora-secondary/releases/%d/Spins/aarch64/images/Fedora-Minimal-%d-%s.aarch64.raw.xz' % (releaseinfo.ga.editions.minimal.release_number, releaseinfo.ga.editions.minimal.release_number, releaseinfo.ga.editions.minimal.rc_version))}}">
+                  <a class="btn btn-outline-fedora-blue" href="{{dl(releaseinfo.ga.alt.minimal.download_override.raw_aarch64, 'https://download.fedoraproject.org/pub/fedora-secondary/releases/%d/Spins/aarch64/images/Fedora-Minimal-%d-%s.aarch64.raw.xz' % (releaseinfo.ga.alt.minimal.release_number, releaseinfo.ga.alt.minimal.release_number, releaseinfo.ga.alt.minimal.rc_version))}}">
                     {% trans trimmed %}Download{% endtrans %}
                   </a>
                 </div>
               </li>
               {% endif %}
 
-            {% if releaseinfo.ga.editions.everything.download_override.netinst_aarch64 %}
+            {% if releaseinfo.ga.alt.everything.download_override.netinst_aarch64 %}
             <li class="list-group-item d-flex align-items-center">
               <div class="flex-grow-1">
-                {% trans trimmed n=releaseinfo.ga.editions.everything.release_number %}
+                {% trans trimmed n=releaseinfo.ga.alt.everything.release_number %}
                 Fedora Everything {{n}}: 64-bit Network install image for aarch64
                 {% endtrans %}
               </div>
               <div>
-                <a class="btn btn-outline-fedora-blue" href="{{dl(releaseinfo.ga.editions.everything.download_override.netinst_aarch64, 'https://download.fedoraproject.org/pub/fedora/linux/releases/%d/Everything/aarch64/iso/Fedora-Everything-netinst-aarch64-%d-%s.iso' % (releaseinfo.ga.editions.everything.release_number, releaseinfo.ga.editions.everything.release_number, releaseinfo.ga.editions.everything.rc_version))}}">{% trans trimmed %}Download{% endtrans %}</a>
+                <a class="btn btn-outline-fedora-blue" href="{{dl(releaseinfo.ga.alt.everything.download_override.netinst_aarch64, 'https://download.fedoraproject.org/pub/fedora/linux/releases/%d/Everything/aarch64/iso/Fedora-Everything-netinst-aarch64-%d-%s.iso' % (releaseinfo.ga.alt.everything.release_number, releaseinfo.ga.alt.everything.release_number, releaseinfo.ga.alt.everything.rc_version))}}">{% trans trimmed %}Download{% endtrans %}</a>
               </div>
             </li>
             {% endif %}
 
-          {% if releaseinfo.ga.editions.cloud.download_override.qcow2_aarch64 %}
+          {% if releaseinfo.ga.alt.cloud.download_override.qcow2_aarch64 %}
           <li class="list-group-item d-flex align-items-center">
             <div class="flex-grow-1">
-              {% trans trimmed n=releaseinfo.ga.editions.cloud.release_number %}
+              {% trans trimmed n=releaseinfo.ga.alt.cloud.release_number %}
               Fedora Cloud {{n}}: Qcow2 image for aarch64
               {% endtrans %}
             </div>
             <div>
-              <a class="btn btn-outline-fedora-blue" href="{{dl(releaseinfo.ga.editions.cloud.download_override.qcow2_aarch64, 'https://download.fedoraproject.org/pub/fedora/linux/releases/%d/Cloud/aarch64/images/Fedora-Cloud-Base-%d-%s.aarch64.qcow2' % (releaseinfo.ga.editions.cloud.release_number, releaseinfo.ga.editions.cloud.release_number, releaseinfo.ga.editions.cloud.rc_version))}}">{% trans trimmed %}Download{% endtrans %}</a>
+              <a class="btn btn-outline-fedora-blue" href="{{dl(releaseinfo.ga.alt.cloud.download_override.qcow2_aarch64, 'https://download.fedoraproject.org/pub/fedora/linux/releases/%d/Cloud/aarch64/images/Fedora-Cloud-Base-%d-%s.aarch64.qcow2' % (releaseinfo.ga.alt.cloud.release_number, releaseinfo.ga.alt.cloud.release_number, releaseinfo.ga.alt.cloud.rc_version))}}">{% trans trimmed %}Download{% endtrans %}</a>
             </div>
           </li>
           {% endif %}
 
-          {% if releaseinfo.ga.editions.cloud.download_override.raw_aarch64 %}
+          {% if releaseinfo.ga.alt.cloud.download_override.raw_aarch64 %}
           <li class="list-group-item d-flex align-items-center">
             <div class="flex-grow-1">
-              {% trans trimmed n=releaseinfo.ga.editions.cloud.release_number %}
+              {% trans trimmed n=releaseinfo.ga.alt.cloud.release_number %}
               Fedora Cloud {{n}}: Raw image for aarch64
               {% endtrans %}
             </div>
             <div>
-              <a class="btn btn-outline-fedora-blue" href="{{dl(releaseinfo.ga.editions.cloud.download_override.raw_aarch64, 'https://download.fedoraproject.org/pub/fedora/linux/releases/%d/Cloud/aarch64/images/Fedora-Cloud-Base-%d-%s.aarch64.raw.xz' % (releaseinfo.ga.editions.cloud.release_number, releaseinfo.ga.editions.cloud.release_number, releaseinfo.ga.editions.cloud.rc_version))}}">{% trans trimmed %}Download{% endtrans %}</a>
+              <a class="btn btn-outline-fedora-blue" href="{{dl(releaseinfo.ga.alt.cloud.download_override.raw_aarch64, 'https://download.fedoraproject.org/pub/fedora/linux/releases/%d/Cloud/aarch64/images/Fedora-Cloud-Base-%d-%s.aarch64.raw.xz' % (releaseinfo.ga.alt.cloud.release_number, releaseinfo.ga.alt.cloud.release_number, releaseinfo.ga.alt.cloud.rc_version))}}">{% trans trimmed %}Download{% endtrans %}</a>
             </div>
           </li>
           {% endif %}
 
-          {% if releaseinfo.ga.editions.container.download_override.aarch64 %}
+          {% if releaseinfo.ga.alt.container.download_override.aarch64 %}
           <li class="list-group-item d-flex align-items-center">
             <div class="flex-grow-1">
-              {% trans trimmed n=releaseinfo.ga.editions.container.release_number %}
+              {% trans trimmed n=releaseinfo.ga.alt.container.release_number %}
               Fedora Container {{n}}: Tarball archive for aarch64
               {% endtrans %}
             </div>
             <div>
-              <a class="btn btn-outline-fedora-blue" href="{{dl(releaseinfo.ga.editions.container.download_override.aarch64, 'https://download.fedoraproject.org/pub/fedora/linux/releases/%d/Container/aarch64/images/Fedora-Container-Base-%d-%s.aarch64.tar.xz' % (releaseinfo.ga.editions.container.release_number, releaseinfo.ga.editions.container.release_number, releaseinfo.ga.editions.container.rc_version))}}">{% trans trimmed %}Download{% endtrans %}</a>
+              <a class="btn btn-outline-fedora-blue" href="{{dl(releaseinfo.ga.alt.container.download_override.aarch64, 'https://download.fedoraproject.org/pub/fedora/linux/releases/%d/Container/aarch64/images/Fedora-Container-Base-%d-%s.aarch64.tar.xz' % (releaseinfo.ga.alt.container.release_number, releaseinfo.ga.alt.container.release_number, releaseinfo.ga.alt.container.rc_version))}}">{% trans trimmed %}Download{% endtrans %}</a>
             </div>
           </li>
           {% endif %}
@@ -170,80 +170,80 @@
       <div class="col-12">
         <ul class="list-group">
 
-          {% if releaseinfo.ga.editions.server.download_override.standard_ppc64le %}
+          {% if releaseinfo.ga.alt.server.download_override.standard_ppc64le %}
             <li class="list-group-item d-flex align-items-center">
               <div class="flex-grow-1">
-                {% trans trimmed n=releaseinfo.ga.editions.server.release_number %}
+                {% trans trimmed n=releaseinfo.ga.alt.server.release_number %}
                 Fedora Server {{n}}: Standard ISO image for PowerPC
                 {% endtrans %}
               </div>
               <div>
-                <a class="btn btn-outline-fedora-blue" href="{{dl(releaseinfo.ga.editions.server.download_override.standard_ppc64le, 'https://download.fedoraproject.org/pub/fedora-secondary/releases/%d/Server/ppc64le/iso/Fedora-Server-dvd-ppc64le-%d-%s.iso' % (releaseinfo.ga.editions.server.release_number, releaseinfo.ga.editions.server.release_number, releaseinfo.ga.editions.server.rc_version))}}">{% trans trimmed %}Download{% endtrans %}</a>
+                <a class="btn btn-outline-fedora-blue" href="{{dl(releaseinfo.ga.alt.server.download_override.standard_ppc64le, 'https://download.fedoraproject.org/pub/fedora-secondary/releases/%d/Server/ppc64le/iso/Fedora-Server-dvd-ppc64le-%d-%s.iso' % (releaseinfo.ga.alt.server.release_number, releaseinfo.ga.alt.server.release_number, releaseinfo.ga.alt.server.rc_version))}}">{% trans trimmed %}Download{% endtrans %}</a>
               </div>
             </li>
             {% endif %}
 
-            {% if releaseinfo.ga.editions.server.download_override.netinst_ppc64le %}
+            {% if releaseinfo.ga.alt.server.download_override.netinst_ppc64le %}
             <li class="list-group-item d-flex align-items-center">
               <div class="flex-grow-1">
-                {% trans trimmed n=releaseinfo.ga.editions.server.release_number %}
+                {% trans trimmed n=releaseinfo.ga.alt.server.release_number %}
                 Fedora Server {{n}}: Netinstall ISO image for PowerPC
                 {% endtrans %}
               </div>
               <div>
-                <a class="btn btn-outline-fedora-blue" href="{{dl(releaseinfo.ga.editions.server.download_override.netinst_ppc64le, 'https://download.fedoraproject.org/pub/fedora-secondary/releases/%d/Server/ppc64le/iso/Fedora-Server-netinst-ppc64le-%d-%s.iso' % (releaseinfo.ga.editions.server.release_number, releaseinfo.ga.editions.server.release_number, releaseinfo.ga.editions.server.rc_version))}}">{% trans trimmed %}Download{% endtrans %}</a>
+                <a class="btn btn-outline-fedora-blue" href="{{dl(releaseinfo.ga.alt.server.download_override.netinst_ppc64le, 'https://download.fedoraproject.org/pub/fedora-secondary/releases/%d/Server/ppc64le/iso/Fedora-Server-netinst-ppc64le-%d-%s.iso' % (releaseinfo.ga.alt.server.release_number, releaseinfo.ga.alt.server.release_number, releaseinfo.ga.alt.server.rc_version))}}">{% trans trimmed %}Download{% endtrans %}</a>
               </div>
             </li>
             {% endif %}
 
-            {% if releaseinfo.ga.editions.everything.download_override.netinst_ppc64le %}
+            {% if releaseinfo.ga.alt.everything.download_override.netinst_ppc64le %}
             <li class="list-group-item d-flex align-items-center">
               <div class="flex-grow-1">
-                {% trans trimmed n=releaseinfo.ga.editions.everything.release_number %}
+                {% trans trimmed n=releaseinfo.ga.alt.everything.release_number %}
                 Fedora Everything {{n}}: 64-bit Network install image for PowerPC
                 {% endtrans %}
               </div>
               <div>
-                <a class="btn btn-outline-fedora-blue" href="{{dl(releaseinfo.ga.editions.everything.download_override.netinst_ppc64le, 'https://download.fedoraproject.org/pub/fedora-secondary/releases/%d/Everything/ppc64le/iso/Fedora-Everything-netinst-ppc64le-%d-%s.iso' % (releaseinfo.ga.editions.everything.release_number, releaseinfo.ga.editions.everything.release_number, releaseinfo.ga.editions.everything.rc_version))}}">{% trans trimmed %}Download{% endtrans %}</a>
+                <a class="btn btn-outline-fedora-blue" href="{{dl(releaseinfo.ga.alt.everything.download_override.netinst_ppc64le, 'https://download.fedoraproject.org/pub/fedora-secondary/releases/%d/Everything/ppc64le/iso/Fedora-Everything-netinst-ppc64le-%d-%s.iso' % (releaseinfo.ga.alt.everything.release_number, releaseinfo.ga.alt.everything.release_number, releaseinfo.ga.alt.everything.rc_version))}}">{% trans trimmed %}Download{% endtrans %}</a>
               </div>
             </li>
             {% endif %}
 
-          {% if releaseinfo.ga.editions.cloud.download_override.qcow2_ppc64le %}
+          {% if releaseinfo.ga.alt.cloud.download_override.qcow2_ppc64le %}
           <li class="list-group-item d-flex align-items-center">
             <div class="flex-grow-1">
-              {% trans trimmed n=releaseinfo.ga.editions.cloud.release_number %}
+              {% trans trimmed n=releaseinfo.ga.alt.cloud.release_number %}
               Fedora Cloud {{n}}: Qcow2 image for PowerPC
               {% endtrans %}
             </div>
             <div>
-              <a class="btn btn-outline-fedora-blue" href="{{dl(releaseinfo.ga.editions.cloud.download_override.qcow2_ppc64le, 'https://download.fedoraproject.org/pub/fedora-secondary/releases/%d/Cloud/ppc64le/images/Fedora-Cloud-Base-%d-%s.ppc64le.qcow2' % (releaseinfo.ga.editions.cloud.release_number, releaseinfo.ga.editions.cloud.release_number, releaseinfo.ga.editions.cloud.rc_version))}}">{% trans trimmed %}Download{% endtrans %}</a>
+              <a class="btn btn-outline-fedora-blue" href="{{dl(releaseinfo.ga.alt.cloud.download_override.qcow2_ppc64le, 'https://download.fedoraproject.org/pub/fedora-secondary/releases/%d/Cloud/ppc64le/images/Fedora-Cloud-Base-%d-%s.ppc64le.qcow2' % (releaseinfo.ga.alt.cloud.release_number, releaseinfo.ga.alt.cloud.release_number, releaseinfo.ga.alt.cloud.rc_version))}}">{% trans trimmed %}Download{% endtrans %}</a>
             </div>
           </li>
           {% endif %}
 
-          {% if releaseinfo.ga.editions.cloud.download_override.raw_ppc64le %}
+          {% if releaseinfo.ga.alt.cloud.download_override.raw_ppc64le %}
           <li class="list-group-item d-flex align-items-center">
             <div class="flex-grow-1">
-              {% trans trimmed n=releaseinfo.ga.editions.cloud.release_number %}
+              {% trans trimmed n=releaseinfo.ga.alt.cloud.release_number %}
               Fedora Cloud {{n}}: Raw image for PowerPC
               {% endtrans %}
             </div>
             <div>
-              <a class="btn btn-outline-fedora-blue" href="{{dl(releaseinfo.ga.editions.cloud.download_override.raw_ppc64le, 'https://download.fedoraproject.org/pub/fedora-secondary/releases/%d/Cloud/ppc64le/images/Fedora-Cloud-Base-%d-%s.ppc64le.raw.xz' % (releaseinfo.ga.editions.cloud.release_number, releaseinfo.ga.editions.cloud.release_number, releaseinfo.ga.editions.cloud.rc_version))}}">{% trans trimmed %}Download{% endtrans %}</a>
+              <a class="btn btn-outline-fedora-blue" href="{{dl(releaseinfo.ga.alt.cloud.download_override.raw_ppc64le, 'https://download.fedoraproject.org/pub/fedora-secondary/releases/%d/Cloud/ppc64le/images/Fedora-Cloud-Base-%d-%s.ppc64le.raw.xz' % (releaseinfo.ga.alt.cloud.release_number, releaseinfo.ga.alt.cloud.release_number, releaseinfo.ga.alt.cloud.rc_version))}}">{% trans trimmed %}Download{% endtrans %}</a>
             </div>
           </li>
           {% endif %}
 
-          {% if releaseinfo.ga.editions.container.download_override.ppc64le %}
+          {% if releaseinfo.ga.alt.container.download_override.ppc64le %}
           <li class="list-group-item d-flex align-items-center">
             <div class="flex-grow-1">
-              {% trans trimmed n=releaseinfo.ga.editions.container.release_number %}
+              {% trans trimmed n=releaseinfo.ga.alt.container.release_number %}
               Fedora Container {{n}}: Tarball archive for PowerPC
               {% endtrans %}
             </div>
             <div>
-              <a class="btn btn-outline-fedora-blue" href="{{dl(releaseinfo.ga.editions.container.download_override.ppc64le, 'https://download.fedoraproject.org/pub/fedora-secondary/releases/%d/Container/ppc64le/images/Fedora-Container-Base-%d-%s.ppc64le.tar.xz' % (releaseinfo.ga.editions.container.release_number, releaseinfo.ga.editions.container.release_number, releaseinfo.ga.editions.container.rc_version))}}">{% trans trimmed %}Download{% endtrans %}</a>
+              <a class="btn btn-outline-fedora-blue" href="{{dl(releaseinfo.ga.alt.container.download_override.ppc64le, 'https://download.fedoraproject.org/pub/fedora-secondary/releases/%d/Container/ppc64le/images/Fedora-Container-Base-%d-%s.ppc64le.tar.xz' % (releaseinfo.ga.alt.container.release_number, releaseinfo.ga.alt.container.release_number, releaseinfo.ga.alt.container.rc_version))}}">{% trans trimmed %}Download{% endtrans %}</a>
             </div>
           </li>
           {% endif %}
@@ -278,80 +278,80 @@
       <div class="col-12">
         <ul class="list-group">
 
-          {% if releaseinfo.ga.editions.server.download_override.standard_s390x %}
+          {% if releaseinfo.ga.alt.server.download_override.standard_s390x %}
             <li class="list-group-item d-flex align-items-center">
               <div class="flex-grow-1">
-                {% trans trimmed n=releaseinfo.ga.editions.server.release_number %}
+                {% trans trimmed n=releaseinfo.ga.alt.server.release_number %}
                 Fedora Server {{n}}: Standard ISO image for s390x
                 {% endtrans %}
               </div>
               <div>
-                <a class="btn btn-outline-fedora-blue" href="{{dl(releaseinfo.ga.editions.server.download_override.standard_s390x, 'https://download.fedoraproject.org/pub/fedora-secondary/releases/%d/Server/s390x/iso/Fedora-Server-dvd-s390x-%d-%s.iso' % (releaseinfo.ga.editions.server.release_number, releaseinfo.ga.editions.server.release_number, releaseinfo.ga.editions.server.rc_version))}}">{% trans trimmed %}Download{% endtrans %}</a>
+                <a class="btn btn-outline-fedora-blue" href="{{dl(releaseinfo.ga.alt.server.download_override.standard_s390x, 'https://download.fedoraproject.org/pub/fedora-secondary/releases/%d/Server/s390x/iso/Fedora-Server-dvd-s390x-%d-%s.iso' % (releaseinfo.ga.alt.server.release_number, releaseinfo.ga.alt.server.release_number, releaseinfo.ga.alt.server.rc_version))}}">{% trans trimmed %}Download{% endtrans %}</a>
               </div>
             </li>
             {% endif %}
 
-            {% if releaseinfo.ga.editions.server.download_override.netinst_s390x %}
+            {% if releaseinfo.ga.alt.server.download_override.netinst_s390x %}
             <li class="list-group-item d-flex align-items-center">
               <div class="flex-grow-1">
-                {% trans trimmed n=releaseinfo.ga.editions.server.release_number %}
+                {% trans trimmed n=releaseinfo.ga.alt.server.release_number %}
                 Fedora Server {{n}}: Netinstall ISO image for s390x
                 {% endtrans %}
               </div>
               <div>
-                <a class="btn btn-outline-fedora-blue" href="{{dl(releaseinfo.ga.editions.server.download_override.netinst_s390x, 'https://download.fedoraproject.org/pub/fedora-secondary/releases/%d/Server/s390x/iso/Fedora-Server-netinst-s390x-%d-%s.iso' % (releaseinfo.ga.editions.server.release_number, releaseinfo.ga.editions.server.release_number, releaseinfo.ga.editions.server.rc_version))}}">{% trans trimmed %}Download{% endtrans %}</a>
+                <a class="btn btn-outline-fedora-blue" href="{{dl(releaseinfo.ga.alt.server.download_override.netinst_s390x, 'https://download.fedoraproject.org/pub/fedora-secondary/releases/%d/Server/s390x/iso/Fedora-Server-netinst-s390x-%d-%s.iso' % (releaseinfo.ga.alt.server.release_number, releaseinfo.ga.alt.server.release_number, releaseinfo.ga.alt.server.rc_version))}}">{% trans trimmed %}Download{% endtrans %}</a>
               </div>
             </li>
             {% endif %}
 
-            {% if releaseinfo.ga.editions.everything.download_override.netinst_s390x %}
+            {% if releaseinfo.ga.alt.everything.download_override.netinst_s390x %}
             <li class="list-group-item d-flex align-items-center">
               <div class="flex-grow-1">
-                {% trans trimmed n=releaseinfo.ga.editions.everything.release_number %}
+                {% trans trimmed n=releaseinfo.ga.alt.everything.release_number %}
                 Fedora Everything {{n}}: 64-bit Network install image for s390x
                 {% endtrans %}
               </div>
               <div>
-                <a class="btn btn-outline-fedora-blue" href="{{dl(releaseinfo.ga.editions.everything.download_override.netinst_s390x, 'https://download.fedoraproject.org/pub/fedora-secondary/releases/%d/Everything/s390x/iso/Fedora-Everything-netinst-s390x-%d-%s.iso' % (releaseinfo.ga.editions.everything.release_number, releaseinfo.ga.editions.everything.release_number, releaseinfo.ga.editions.everything.rc_version))}}">{% trans trimmed %}Download{% endtrans %}</a>
+                <a class="btn btn-outline-fedora-blue" href="{{dl(releaseinfo.ga.alt.everything.download_override.netinst_s390x, 'https://download.fedoraproject.org/pub/fedora-secondary/releases/%d/Everything/s390x/iso/Fedora-Everything-netinst-s390x-%d-%s.iso' % (releaseinfo.ga.alt.everything.release_number, releaseinfo.ga.alt.everything.release_number, releaseinfo.ga.alt.everything.rc_version))}}">{% trans trimmed %}Download{% endtrans %}</a>
               </div>
             </li>
             {% endif %}
 
-          {% if releaseinfo.ga.editions.cloud.download_override.qcow2_s390x %}
+          {% if releaseinfo.ga.alt.cloud.download_override.qcow2_s390x %}
           <li class="list-group-item d-flex align-items-center">
             <div class="flex-grow-1">
-              {% trans trimmed n=releaseinfo.ga.editions.cloud.release_number %}
+              {% trans trimmed n=releaseinfo.ga.alt.cloud.release_number %}
               Fedora Cloud {{n}}: Qcow2 image for s390x
               {% endtrans %}
             </div>
             <div>
-              <a class="btn btn-outline-fedora-blue" href="{{dl(releaseinfo.ga.editions.cloud.download_override.qcow2_s390x, 'https://download.fedoraproject.org/pub/fedora-secondary/releases/%d/Cloud/s390x/images/Fedora-Cloud-Base-%d-%s.s390x.qcow2' % (releaseinfo.ga.editions.cloud.release_number, releaseinfo.ga.editions.cloud.release_number, releaseinfo.ga.editions.cloud.rc_version))}}">{% trans trimmed %}Download{% endtrans %}</a>
+              <a class="btn btn-outline-fedora-blue" href="{{dl(releaseinfo.ga.alt.cloud.download_override.qcow2_s390x, 'https://download.fedoraproject.org/pub/fedora-secondary/releases/%d/Cloud/s390x/images/Fedora-Cloud-Base-%d-%s.s390x.qcow2' % (releaseinfo.ga.alt.cloud.release_number, releaseinfo.ga.alt.cloud.release_number, releaseinfo.ga.alt.cloud.rc_version))}}">{% trans trimmed %}Download{% endtrans %}</a>
             </div>
           </li>
           {% endif %}
 
-          {% if releaseinfo.ga.editions.cloud.download_override.raw_s390x %}
+          {% if releaseinfo.ga.alt.cloud.download_override.raw_s390x %}
           <li class="list-group-item d-flex align-items-center">
             <div class="flex-grow-1">
-              {% trans trimmed n=releaseinfo.ga.editions.cloud.release_number %}
+              {% trans trimmed n=releaseinfo.ga.alt.cloud.release_number %}
               Fedora Cloud {{n}}: Raw image for s390x
               {% endtrans %}
             </div>
             <div>
-              <a class="btn btn-outline-fedora-blue" href="{{dl(releaseinfo.ga.editions.cloud.download_override.raw_s390x, 'https://download.fedoraproject.org/pub/fedora-secondary/releases/%d/Cloud/s390x/images/Fedora-Cloud-Base-%d-%s.s390x.raw.xz' % (releaseinfo.ga.editions.cloud.release_number, releaseinfo.ga.editions.cloud.release_number, releaseinfo.ga.editions.cloud.rc_version))}}">{% trans trimmed %}Download{% endtrans %}</a>
+              <a class="btn btn-outline-fedora-blue" href="{{dl(releaseinfo.ga.alt.cloud.download_override.raw_s390x, 'https://download.fedoraproject.org/pub/fedora-secondary/releases/%d/Cloud/s390x/images/Fedora-Cloud-Base-%d-%s.s390x.raw.xz' % (releaseinfo.ga.alt.cloud.release_number, releaseinfo.ga.alt.cloud.release_number, releaseinfo.ga.alt.cloud.rc_version))}}">{% trans trimmed %}Download{% endtrans %}</a>
             </div>
           </li>
           {% endif %}
 
-          {% if releaseinfo.ga.editions.container.download_override.s390x %}
+          {% if releaseinfo.ga.alt.container.download_override.s390x %}
           <li class="list-group-item d-flex align-items-center">
             <div class="flex-grow-1">
-              {% trans trimmed n=releaseinfo.ga.editions.container.release_number %}
+              {% trans trimmed n=releaseinfo.ga.alt.container.release_number %}
               Fedora Container {{n}}: Tarball archive for s390x
               {% endtrans %}
             </div>
             <div>
-              <a class="btn btn-outline-fedora-blue" href="{{dl(releaseinfo.ga.editions.container.download_override.s390x, 'https://download.fedoraproject.org/pub/fedora-secondary/releases/%d/Container/s390x/images/Fedora-Container-Base-%d-%s.s390x.tar.xz' % (releaseinfo.ga.editions.container.release_number, releaseinfo.ga.editions.container.release_number, releaseinfo.ga.editions.container.rc_version))}}">{% trans trimmed %}Download{% endtrans %}</a>
+              <a class="btn btn-outline-fedora-blue" href="{{dl(releaseinfo.ga.alt.container.download_override.s390x, 'https://download.fedoraproject.org/pub/fedora-secondary/releases/%d/Container/s390x/images/Fedora-Container-Base-%d-%s.s390x.tar.xz' % (releaseinfo.ga.alt.container.release_number, releaseinfo.ga.alt.container.release_number, releaseinfo.ga.alt.container.rc_version))}}">{% trans trimmed %}Download{% endtrans %}</a>
             </div>
           </li>
           {% endif %}

@@ -1,0 +1,37 @@
+{% macro cloud_menu()%}
+  {% set logoimage = '<img src="/static/images/logo-inline-cloud.png" alt="Fedora Cloud Logo"/>' %}
+<div class="bg-light border-bottom">
+        <div class="container">
+          <nav class="navbar navbar-light navbar-expand-sm bg-none p-0">
+              <span class="navbar-brand">
+                <a href="{{url_for('alt', lang_code=lang_code)}}">{{logoimage|safe}}</a>
+              </span>
+              <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav  ml-auto font-size-90 font-weight-bold">
+                  <li class="nav-item">
+                    <a class="nav-link" href="{{url_for('alt', lang_code=lang_code)}}">
+                      {% trans trimmed %}Overview{% endtrans %}
+                    </a>
+                  </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="{{url_for('alt_prerelease', lang_code=lang_code)}}">
+                        {% trans trimmed %}Pre-release{% endtrans %}
+                      </a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link active border-bottom border-fedora-purple border-width-3" href="{{url_for('alt_cloud', lang_code=lang_code)}}">
+                        {% trans trimmed %}Cloud{% endtrans %}
+                      </a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="{{url_for('alt_download', lang_code=lang_code)}}">
+                        {% trans trimmed %}Download{% endtrans %}
+                      </a>
+                    </li>
+                </ul>
+                
+              </div>
+            </nav>
+          </div>
+      </div>
+{% endmacro %}

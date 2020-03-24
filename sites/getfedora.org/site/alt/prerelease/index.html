@@ -17,7 +17,7 @@
   </div>
 </div>
 
-<div class="bg-tranparent py-5">
+<div class="bg-tranparent pb-5">
   <div class="container">
     <div class="row align-items-center">
       <div class="col-12">
@@ -47,16 +47,16 @@
       <div class="col-lg-6 pt-4 pt-lg-0 align-self-center">
         <ul class="list-group">
 
-          {% if releaseinfo.beta.show and releaseinfo.beta.editions.server.download_override.netinst_aarch64 %}
+          {% if releaseinfo.beta.show and releaseinfo.beta.alt.server.download_override.netinst_x86_64 %}
             <li class="list-group-item d-flex align-items-center">
               <div class="flex-grow-1">
-                {% trans trimmed n=releaseinfo.beta.editions.server.release_number %}
-                Fedora {{n}}: Netinstall ISO image for aarch64
+                {% trans trimmed n=releaseinfo.beta.alt.server.release_number %}
+                Fedora {{n}}: Netinstall ISO image for x86_64
                 {% endtrans %}
                 <span class="badge badge-primary">{% trans trimmed %}Beta!{% endtrans %}</span>
               </div>
               <div>
-                <a class="btn btn-outline-fedora-blue" href="{{dl(releaseinfo.beta.editions.server.download_override.netinst_aarch64, 'https://download.fedoraproject.org/pub/fedora/linux/releases/test/%d_Beta/Server/aarch64/iso/Fedora-Server-netinst-aarch64-%d_Beta-%s.iso' % (releaseinfo.beta.editions.server.release_number, releaseinfo.beta.editions.server.release_number, releaseinfo.beta.editions.server.rc_version))}}">{% trans trimmed %}Download{% endtrans %}</a>
+                <a class="btn btn-outline-fedora-blue" href="{{dl(releaseinfo.beta.alt.server.download_override.netinst_x86_64, 'https://download.fedoraproject.org/pub/fedora/linux/releases/test/%d_Beta/Server/aarch64/iso/Fedora-Server-netinst-aarch64-%d_Beta-%s.iso' % (releaseinfo.beta.alt.server.release_number, releaseinfo.beta.alt.server.release_number, releaseinfo.beta.alt.server.rc_version))}}">{% trans trimmed %}Download{% endtrans %}</a>
               </div>
             </li>
             {% endif %}
@@ -82,72 +82,72 @@
         <h5 class="font-weight-light">{% trans trimmed %}Using the aarch64 Architecture?{% endtrans %}</h5>
         <ul class="list-group">
 
-          {% if releaseinfo.beta.show and releaseinfo.beta.editions.server.download_override.standard_aarch64 %}
+          {% if releaseinfo.beta.show and releaseinfo.beta.alt.server.download_override.standard_aarch64 %}
           <li class="list-group-item d-flex align-items-center">
             <div class="flex-grow-1">
-              {% trans trimmed n=releaseinfo.beta.editions.server.release_number %}
+              {% trans trimmed n=releaseinfo.beta.alt.server.release_number %}
               Fedora Server {{n}}: Standard ISO image for aarch64
               {% endtrans %}
               <span class="badge badge-primary">{% trans trimmed %}Beta!{% endtrans %}</span>
             </div>
             <div>
-              <a class="btn btn-outline-fedora-blue ml-1" href="{{dl(releaseinfo.beta.editions.server.download_override.standard_aarch64, 'https://download.fedoraproject.org/pub/fedora/linux/releases/test/%d_Beta/Server/aarch64/iso/Fedora-Server-dvd-aarch64-%d_Beta-%s.iso' % (releaseinfo.beta.editions.server.release_number, releaseinfo.beta.editions.server.release_number, releaseinfo.beta.editions.server.rc_version))}}">{% trans trimmed %}Download{% endtrans %}</a>
+              <a class="btn btn-outline-fedora-blue ml-1" href="{{dl(releaseinfo.beta.alt.server.download_override.standard_aarch64, 'https://download.fedoraproject.org/pub/fedora/linux/releases/test/%d_Beta/Server/aarch64/iso/Fedora-Server-dvd-aarch64-%d_Beta-%s.iso' % (releaseinfo.beta.alt.server.release_number, releaseinfo.beta.alt.server.release_number, releaseinfo.beta.alt.server.rc_version))}}">{% trans trimmed %}Download{% endtrans %}</a>
             </div>
           </li>
           {% endif %}
 
-          {% if releaseinfo.beta.show and releaseinfo.beta.editions.server.download_override.netinst_aarch64 %}
+          {% if releaseinfo.beta.show and releaseinfo.beta.alt.server.download_override.netinst_aarch64 %}
           <li class="list-group-item d-flex align-items-center">
             <div class="flex-grow-1">
-              {% trans trimmed n=releaseinfo.beta.editions.server.release_number %}
+              {% trans trimmed n=releaseinfo.beta.alt.server.release_number %}
               Fedora Server {{n}}: Netinstall ISO image for aarch64
               {% endtrans %}
               <span class="badge badge-primary">{% trans trimmed %}Beta!{% endtrans %}</span>
             </div>
             <div>
-              <a class="btn btn-outline-fedora-blue ml-1" href="{{dl(releaseinfo.beta.editions.server.download_override.netinst_aarch64, 'https://download.fedoraproject.org/pub/fedora/linux/releases/test/%d_Beta/Server/aarch64/iso/Fedora-Server-netinst-aarch64-%d_Beta-%s.iso' % (releaseinfo.beta.editions.server.release_number, releaseinfo.beta.editions.server.release_number, releaseinfo.beta.editions.server.rc_version))}}">{% trans trimmed %}Download{% endtrans %}</a>
+              <a class="btn btn-outline-fedora-blue ml-1" href="{{dl(releaseinfo.beta.alt.server.download_override.netinst_aarch64, 'https://download.fedoraproject.org/pub/fedora/linux/releases/test/%d_Beta/Server/aarch64/iso/Fedora-Server-netinst-aarch64-%d_Beta-%s.iso' % (releaseinfo.beta.alt.server.release_number, releaseinfo.beta.alt.server.release_number, releaseinfo.beta.alt.server.rc_version))}}">{% trans trimmed %}Download{% endtrans %}</a>
             </div>
           </li>
           {% endif %}
 
-          {% if releaseinfo.beta.show and releaseinfo.beta.editions.cloud.download_override.qcow2_aarch64 %}
+          {% if releaseinfo.beta.show and releaseinfo.beta.alt.cloud.download_override.qcow2_aarch64 %}
           <li class="list-group-item d-flex align-items-center">
             <div class="flex-grow-1">
-              {% trans trimmed n=releaseinfo.beta.editions.cloud.release_number %}
+              {% trans trimmed n=releaseinfo.beta.alt.cloud.release_number %}
               Fedora Cloud {{n}}: Qcow2 image for aarch64
               {% endtrans %}
               <span class="badge badge-primary">{% trans trimmed %}Beta!{% endtrans %}</span>
             </div>
             <div>
-              <a class="btn btn-outline-fedora-blue ml-1" href="{{dl(releaseinfo.beta.editions.cloud.download_override.qcow2_aarch64, 'https://download.fedoraproject.org/pub/fedora/linux/releases/test/%d_Beta/Cloud/aarch64/images/Fedora-Cloud-Base-%d_Beta-%s.aarch64.qcow2' % (releaseinfo.beta.editions.cloud.release_number, releaseinfo.beta.editions.cloud.release_number, releaseinfo.beta.editions.cloud.rc_version))}}">{% trans trimmed %}Download{% endtrans %}</a>
+              <a class="btn btn-outline-fedora-blue ml-1" href="{{dl(releaseinfo.beta.alt.cloud.download_override.qcow2_aarch64, 'https://download.fedoraproject.org/pub/fedora/linux/releases/test/%d_Beta/Cloud/aarch64/images/Fedora-Cloud-Base-%d_Beta-%s.aarch64.qcow2' % (releaseinfo.beta.alt.cloud.release_number, releaseinfo.beta.alt.cloud.release_number, releaseinfo.beta.alt.cloud.rc_version))}}">{% trans trimmed %}Download{% endtrans %}</a>
             </div>
           </li>
           {% endif %}
 
-          {% if releaseinfo.beta.show and releaseinfo.beta.editions.cloud.download_override.raw_aarch64 %}
+          {% if releaseinfo.beta.show and releaseinfo.beta.alt.cloud.download_override.raw_aarch64 %}
           <li class="list-group-item d-flex align-items-center">
             <div class="flex-grow-1">
-              {% trans trimmed n=releaseinfo.beta.editions.cloud.release_number %}
+              {% trans trimmed n=releaseinfo.beta.alt.cloud.release_number %}
               Fedora Cloud {{n}}: Raw image for aarch64
               {% endtrans %}
               <span class="badge badge-primary">{% trans trimmed %}Beta!{% endtrans %}</span>
             </div>
             <div>
-              <a class="btn btn-outline-fedora-blue ml-1" href="{{dl(releaseinfo.beta.editions.cloud.download_override.raw_aarch64, 'https://download.fedoraproject.org/pub/fedora/linux/releases/test/%d_Beta/Cloud/aarch64/images/Fedora-Cloud-Base-%d_Beta-%s.aarch64.raw.xz' % (releaseinfo.beta.editions.cloud.release_number, releaseinfo.beta.editions.cloud.release_number, releaseinfo.beta.editions.cloud.rc_version))}}">{% trans trimmed %}Download{% endtrans %}</a>
+              <a class="btn btn-outline-fedora-blue ml-1" href="{{dl(releaseinfo.beta.alt.cloud.download_override.raw_aarch64, 'https://download.fedoraproject.org/pub/fedora/linux/releases/test/%d_Beta/Cloud/aarch64/images/Fedora-Cloud-Base-%d_Beta-%s.aarch64.raw.xz' % (releaseinfo.beta.alt.cloud.release_number, releaseinfo.beta.alt.cloud.release_number, releaseinfo.beta.alt.cloud.rc_version))}}">{% trans trimmed %}Download{% endtrans %}</a>
             </div>
           </li>
           {% endif %}
 
-          {% if releaseinfo.beta.show and releaseinfo.beta.editions.container.download_override.aarch64 %}
+          {% if releaseinfo.beta.show and releaseinfo.beta.alt.container.download_override.aarch64 %}
           <li class="list-group-item d-flex align-items-center">
             <div class="flex-grow-1">
-              {% trans trimmed n=releaseinfo.beta.editions.container.release_number %}
+              {% trans trimmed n=releaseinfo.beta.alt.container.release_number %}
               Fedora Container {{n}}: Tarball archive for aarch64
               {% endtrans %}
               <span class="badge badge-primary">{% trans trimmed %}Beta!{% endtrans %}</span>
             </div>
             <div>
-              <a class="btn btn-outline-fedora-blue ml-1" href="{{dl(releaseinfo.beta.editions.container.download_override.aarch64, 'https://download.fedoraproject.org/pub/fedora/linux/releases/test/%d_Beta/Container/aarch64/images/Fedora-Container-Base-%d_Beta-%s.aarch64.tar.xz' % (releaseinfo.beta.editions.container.release_number, releaseinfo.beta.editions.container.release_number, releaseinfo.beta.editions.container.rc_version))}}">{% trans trimmed %}Download{% endtrans %}</a>
+              <a class="btn btn-outline-fedora-blue ml-1" href="{{dl(releaseinfo.beta.alt.container.download_override.aarch64, 'https://download.fedoraproject.org/pub/fedora/linux/releases/test/%d_Beta/Container/aarch64/images/Fedora-Container-Base-%d_Beta-%s.aarch64.tar.xz' % (releaseinfo.beta.alt.container.release_number, releaseinfo.beta.alt.container.release_number, releaseinfo.beta.alt.container.rc_version))}}">{% trans trimmed %}Download{% endtrans %}</a>
             </div>
           </li>
           {% endif %}
@@ -157,72 +157,72 @@
       <div class="col-12 col-lg-4 mt-lg-0 mt-4">
         <h5 class="font-weight-light">{% trans trimmed %}Using the PowerPC Architecture?{% endtrans %}</h5>
         <ul class="list-group">
-          {% if releaseinfo.beta.show and releaseinfo.beta.editions.server.download_override.standard_ppc64le %}
+          {% if releaseinfo.beta.show and releaseinfo.beta.alt.server.download_override.standard_ppc64le %}
           <li class="list-group-item d-flex align-items-center">
             <div class="flex-grow-1">
-              {% trans trimmed n=releaseinfo.beta.editions.server.release_number %}
+              {% trans trimmed n=releaseinfo.beta.alt.server.release_number %}
               Fedora Server {{n}}: Standard ISO image for PowerPC
               {% endtrans %}
               <span class="badge badge-primary">{% trans trimmed %}Beta!{% endtrans %}</span>
             </div>
             <div>
-              <a class="btn btn-outline-fedora-blue ml-1" href="{{dl(releaseinfo.beta.editions.server.download_override.standard_ppc64le, 'https://download.fedoraproject.org/pub/fedora-secondary/releases/test/%d_Beta/Server/ppc64le/iso/Fedora-Server-dvd-ppc64le-%d_Beta-%s.iso' % (releaseinfo.beta.editions.server.release_number, releaseinfo.beta.editions.server.release_number, releaseinfo.beta.editions.server.rc_version))}}">{% trans trimmed %}Download{% endtrans %}</a>
+              <a class="btn btn-outline-fedora-blue ml-1" href="{{dl(releaseinfo.beta.alt.server.download_override.standard_ppc64le, 'https://download.fedoraproject.org/pub/fedora-secondary/releases/test/%d_Beta/Server/ppc64le/iso/Fedora-Server-dvd-ppc64le-%d_Beta-%s.iso' % (releaseinfo.beta.alt.server.release_number, releaseinfo.beta.alt.server.release_number, releaseinfo.beta.alt.server.rc_version))}}">{% trans trimmed %}Download{% endtrans %}</a>
             </div>
           </li>
           {% endif %}
 
-          {% if releaseinfo.beta.show and releaseinfo.beta.editions.server.download_override.netinst_ppc64le %}
+          {% if releaseinfo.beta.show and releaseinfo.beta.alt.server.download_override.netinst_ppc64le %}
           <li class="list-group-item d-flex align-items-center">
             <div class="flex-grow-1">
-              {% trans trimmed n=releaseinfo.beta.editions.server.release_number %}
+              {% trans trimmed n=releaseinfo.beta.alt.server.release_number %}
               Fedora Server {{n}}: Netinstall ISO image for PowerPC
               {% endtrans %}
               <span class="badge badge-primary">{% trans trimmed %}Beta!{% endtrans %}</span>
             </div>
             <div>
-              <a class="btn btn-outline-fedora-blue ml-1" href="{{dl(releaseinfo.beta.editions.server.download_override.netinst_ppc64le, 'https://download.fedoraproject.org/pub/fedora-secondary/releases/test/%d_Beta/Server/ppc64le/iso/Fedora-Server-netinst-ppc64le-%d_Beta-%s.iso' % (releaseinfo.beta.editions.server.release_number, releaseinfo.beta.editions.server.release_number, releaseinfo.beta.editions.server.rc_version))}}">{% trans trimmed %}Download{% endtrans %}</a>
+              <a class="btn btn-outline-fedora-blue ml-1" href="{{dl(releaseinfo.beta.alt.server.download_override.netinst_ppc64le, 'https://download.fedoraproject.org/pub/fedora-secondary/releases/test/%d_Beta/Server/ppc64le/iso/Fedora-Server-netinst-ppc64le-%d_Beta-%s.iso' % (releaseinfo.beta.alt.server.release_number, releaseinfo.beta.alt.server.release_number, releaseinfo.beta.alt.server.rc_version))}}">{% trans trimmed %}Download{% endtrans %}</a>
             </div>
           </li>
           {% endif %}
 
-          {% if releaseinfo.beta.show and releaseinfo.beta.editions.cloud.download_override.qcow2_ppc64le %}
+          {% if releaseinfo.beta.show and releaseinfo.beta.alt.cloud.download_override.qcow2_ppc64le %}
           <li class="list-group-item d-flex align-items-center">
             <div class="flex-grow-1">
-              {% trans trimmed n=releaseinfo.beta.editions.cloud.release_number %}
+              {% trans trimmed n=releaseinfo.beta.alt.cloud.release_number %}
               Fedora Cloud {{n}}: Qcow2 image for PowerPC
               {% endtrans %}
               <span class="badge badge-primary">{% trans trimmed %}Beta!{% endtrans %}</span>
             </div>
             <div>
-              <a class="btn btn-outline-fedora-blue ml-1" href="{{dl(releaseinfo.beta.editions.cloud.download_override.qcow2_ppc64le, 'https://download.fedoraproject.org/pub/fedora-secondary/releases/test/%d_Beta/Cloud/ppc64le/images/Fedora-Cloud-Base-%d_Beta-%s.ppc64le.qcow2' % (releaseinfo.beta.editions.cloud.release_number, releaseinfo.beta.editions.cloud.release_number, releaseinfo.beta.editions.cloud.rc_version))}}">{% trans trimmed %}Download{% endtrans %}</a>
+              <a class="btn btn-outline-fedora-blue ml-1" href="{{dl(releaseinfo.beta.alt.cloud.download_override.qcow2_ppc64le, 'https://download.fedoraproject.org/pub/fedora-secondary/releases/test/%d_Beta/Cloud/ppc64le/images/Fedora-Cloud-Base-%d_Beta-%s.ppc64le.qcow2' % (releaseinfo.beta.alt.cloud.release_number, releaseinfo.beta.alt.cloud.release_number, releaseinfo.beta.alt.cloud.rc_version))}}">{% trans trimmed %}Download{% endtrans %}</a>
             </div>
           </li>
           {% endif %}
 
-          {% if releaseinfo.beta.show and releaseinfo.beta.editions.cloud.download_override.raw_ppc64le %}
+          {% if releaseinfo.beta.show and releaseinfo.beta.alt.cloud.download_override.raw_ppc64le %}
           <li class="list-group-item d-flex align-items-center">
             <div class="flex-grow-1">
-              {% trans trimmed n=releaseinfo.beta.editions.cloud.release_number %}
+              {% trans trimmed n=releaseinfo.beta.alt.cloud.release_number %}
               Fedora Cloud {{n}}: Raw image for PowerPC
               {% endtrans %}
               <span class="badge badge-primary">{% trans trimmed %}Beta!{% endtrans %}</span>
             </div>
             <div>
-              <a class="btn btn-outline-fedora-blue ml-1" href="{{dl(releaseinfo.beta.editions.cloud.download_override.raw_ppc64le, 'https://download.fedoraproject.org/pub/fedora-secondary/releases/test/%d_Beta/Cloud/ppc64le/images/Fedora-Cloud-Base-%d_Beta-%s.ppc64le.raw.xz' % (releaseinfo.beta.editions.cloud.release_number, releaseinfo.beta.editions.cloud.release_number, releaseinfo.beta.editions.cloud.rc_version))}}">{% trans trimmed %}Download{% endtrans %}</a>
+              <a class="btn btn-outline-fedora-blue ml-1" href="{{dl(releaseinfo.beta.alt.cloud.download_override.raw_ppc64le, 'https://download.fedoraproject.org/pub/fedora-secondary/releases/test/%d_Beta/Cloud/ppc64le/images/Fedora-Cloud-Base-%d_Beta-%s.ppc64le.raw.xz' % (releaseinfo.beta.alt.cloud.release_number, releaseinfo.beta.alt.cloud.release_number, releaseinfo.beta.alt.cloud.rc_version))}}">{% trans trimmed %}Download{% endtrans %}</a>
             </div>
           </li>
           {% endif %}
 
-          {% if releaseinfo.beta.show and releaseinfo.beta.editions.container.download_override.ppc64le %}
+          {% if releaseinfo.beta.show and releaseinfo.beta.alt.container.download_override.ppc64le %}
           <li class="list-group-item d-flex align-items-center">
             <div class="flex-grow-1">
-              {% trans trimmed n=releaseinfo.beta.editions.container.release_number %}
+              {% trans trimmed n=releaseinfo.beta.alt.container.release_number %}
               Fedora Container {{n}}: Tarball archive for PowerPC
               {% endtrans %}
               <span class="badge badge-primary">{% trans trimmed %}Beta!{% endtrans %}</span>
             </div>
             <div>
-              <a class="btn btn-outline-fedora-blue ml-1" href="{{dl(releaseinfo.beta.editions.container.download_override.ppc64le, 'https://download.fedoraproject.org/pub/fedora-secondary/releases/test/%d_Beta/Container/ppc64le/images/Fedora-Container-Base-%d_Beta-%s.ppc64le.tar.xz' % (releaseinfo.beta.editions.container.release_number, releaseinfo.beta.editions.container.release_number, releaseinfo.beta.editions.container.rc_version))}}">{% trans trimmed %}Download{% endtrans %}</a>
+              <a class="btn btn-outline-fedora-blue ml-1" href="{{dl(releaseinfo.beta.alt.container.download_override.ppc64le, 'https://download.fedoraproject.org/pub/fedora-secondary/releases/test/%d_Beta/Container/ppc64le/images/Fedora-Container-Base-%d_Beta-%s.ppc64le.tar.xz' % (releaseinfo.beta.alt.container.release_number, releaseinfo.beta.alt.container.release_number, releaseinfo.beta.alt.container.rc_version))}}">{% trans trimmed %}Download{% endtrans %}</a>
             </div>
           </li>
           {% endif %}
@@ -232,72 +232,72 @@
       <div class="col-12 col-lg-4 mt-lg-0 mt-4">
         <h5 class="font-weight-light">{% trans trimmed %}Using the s390x Architecture?{% endtrans %}</h5>
         <ul class="list-group">
-          {% if releaseinfo.beta.show and releaseinfo.beta.editions.server.download_override.standard_s390x %}
+          {% if releaseinfo.beta.show and releaseinfo.beta.alt.server.download_override.standard_s390x %}
           <li class="list-group-item d-flex align-items-center">
             <div class="flex-grow-1">
-              {% trans trimmed n=releaseinfo.beta.editions.server.release_number %}
+              {% trans trimmed n=releaseinfo.beta.alt.server.release_number %}
               Fedora Server {{n}}: Standard ISO image for s390x
               {% endtrans %}
               <span class="badge badge-primary">{% trans trimmed %}Beta!{% endtrans %}</span>
             </div>
             <div>
-              <a class="btn btn-outline-fedora-blue ml-1" href="{{dl(releaseinfo.beta.editions.server.download_override.standard_s390x, 'https://download.fedoraproject.org/pub/fedora-secondary/releases/test/%d_Beta/Server/s390x/iso/Fedora-Server-dvd-s390x-%d_Beta-%s.iso' % (releaseinfo.beta.editions.server.release_number, releaseinfo.beta.editions.server.release_number, releaseinfo.beta.editions.server.rc_version))}}">{% trans trimmed %}Download{% endtrans %}</a>
+              <a class="btn btn-outline-fedora-blue ml-1" href="{{dl(releaseinfo.beta.alt.server.download_override.standard_s390x, 'https://download.fedoraproject.org/pub/fedora-secondary/releases/test/%d_Beta/Server/s390x/iso/Fedora-Server-dvd-s390x-%d_Beta-%s.iso' % (releaseinfo.beta.alt.server.release_number, releaseinfo.beta.alt.server.release_number, releaseinfo.beta.alt.server.rc_version))}}">{% trans trimmed %}Download{% endtrans %}</a>
             </div>
           </li>
           {% endif %}
 
-          {% if releaseinfo.beta.show and releaseinfo.beta.editions.server.download_override.netinst_s390x %}
+          {% if releaseinfo.beta.show and releaseinfo.beta.alt.server.download_override.netinst_s390x %}
           <li class="list-group-item d-flex align-items-center">
             <div class="flex-grow-1">
-              {% trans trimmed n=releaseinfo.beta.editions.server.release_number %}
+              {% trans trimmed n=releaseinfo.beta.alt.server.release_number %}
               Fedora Server {{n}}: Netinstall ISO image for s390x
               {% endtrans %}
               <span class="badge badge-primary">{% trans trimmed %}Beta!{% endtrans %}</span>
             </div>
             <div>
-              <a class="btn btn-outline-fedora-blue ml-1" href="{{dl(releaseinfo.beta.editions.server.download_override.netinst_s390x, 'https://download.fedoraproject.org/pub/fedora-secondary/releases/test/%d_Beta/Server/s390x/iso/Fedora-Server-netinst-s390x-%d_Beta-%s.iso' % (releaseinfo.beta.editions.server.release_number, releaseinfo.beta.editions.server.release_number, releaseinfo.beta.editions.server.rc_version))}}">{% trans trimmed %}Download{% endtrans %}</a>
+              <a class="btn btn-outline-fedora-blue ml-1" href="{{dl(releaseinfo.beta.alt.server.download_override.netinst_s390x, 'https://download.fedoraproject.org/pub/fedora-secondary/releases/test/%d_Beta/Server/s390x/iso/Fedora-Server-netinst-s390x-%d_Beta-%s.iso' % (releaseinfo.beta.alt.server.release_number, releaseinfo.beta.alt.server.release_number, releaseinfo.beta.alt.server.rc_version))}}">{% trans trimmed %}Download{% endtrans %}</a>
             </div>
           </li>
           {% endif %}
 
-          {% if releaseinfo.beta.show and releaseinfo.beta.editions.cloud.download_override.qcow2_s390x %}
+          {% if releaseinfo.beta.show and releaseinfo.beta.alt.cloud.download_override.qcow2_s390x %}
           <li class="list-group-item d-flex align-items-center">
             <div class="flex-grow-1">
-              {% trans trimmed n=releaseinfo.beta.editions.cloud.release_number %}
+              {% trans trimmed n=releaseinfo.beta.alt.cloud.release_number %}
               Fedora Cloud {{n}}: Qcow2 image for s390x
               {% endtrans %}
               <span class="badge badge-primary">{% trans trimmed %}Beta!{% endtrans %}</span>
             </div>
             <div>
-              <a class="btn btn-outline-fedora-blue ml-1" href="{{dl(releaseinfo.beta.editions.cloud.download_override.qcow2_s390x, 'https://download.fedoraproject.org/pub/fedora-secondary/releases/test/%d_Beta/Cloud/s390x/images/Fedora-Cloud-Base-%d_Beta-%s.s390x.qcow2' % (releaseinfo.beta.editions.cloud.release_number, releaseinfo.beta.editions.cloud.release_number, releaseinfo.beta.editions.cloud.rc_version))}}">{% trans trimmed %}Download{% endtrans %}</a>
+              <a class="btn btn-outline-fedora-blue ml-1" href="{{dl(releaseinfo.beta.alt.cloud.download_override.qcow2_s390x, 'https://download.fedoraproject.org/pub/fedora-secondary/releases/test/%d_Beta/Cloud/s390x/images/Fedora-Cloud-Base-%d_Beta-%s.s390x.qcow2' % (releaseinfo.beta.alt.cloud.release_number, releaseinfo.beta.alt.cloud.release_number, releaseinfo.beta.alt.cloud.rc_version))}}">{% trans trimmed %}Download{% endtrans %}</a>
             </div>
           </li>
           {% endif %}
 
-          {% if releaseinfo.beta.show and releaseinfo.beta.editions.cloud.download_override.raw_s390x %}
+          {% if releaseinfo.beta.show and releaseinfo.beta.alt.cloud.download_override.raw_s390x %}
           <li class="list-group-item d-flex align-items-center">
             <div class="flex-grow-1">
-              {% trans trimmed n=releaseinfo.beta.editions.cloud.release_number %}
+              {% trans trimmed n=releaseinfo.beta.alt.cloud.release_number %}
               Fedora Cloud {{n}}: Raw image for s390x
               {% endtrans %}
               <span class="badge badge-primary">{% trans trimmed %}Beta!{% endtrans %}</span>
             </div>
             <div>
-              <a class="btn btn-outline-fedora-blue ml-1" href="{{dl(releaseinfo.beta.editions.cloud.download_override.raw_s390x, 'https://download.fedoraproject.org/pub/fedora-secondary/releases/test/%d_Beta/Cloud/s390x/images/Fedora-Cloud-Base-%d_Beta-%s.s390x.raw.xz' % (releaseinfo.beta.editions.cloud.release_number, releaseinfo.beta.editions.cloud.release_number, releaseinfo.beta.editions.cloud.rc_version))}}">{% trans trimmed %}Download{% endtrans %}</a>
+              <a class="btn btn-outline-fedora-blue ml-1" href="{{dl(releaseinfo.beta.alt.cloud.download_override.raw_s390x, 'https://download.fedoraproject.org/pub/fedora-secondary/releases/test/%d_Beta/Cloud/s390x/images/Fedora-Cloud-Base-%d_Beta-%s.s390x.raw.xz' % (releaseinfo.beta.alt.cloud.release_number, releaseinfo.beta.alt.cloud.release_number, releaseinfo.beta.alt.cloud.rc_version))}}">{% trans trimmed %}Download{% endtrans %}</a>
             </div>
           </li>
           {% endif %}
 
-          {% if releaseinfo.beta.show and releaseinfo.beta.editions.container.download_override.s390x %}
+          {% if releaseinfo.beta.show and releaseinfo.beta.alt.container.download_override.s390x %}
           <li class="list-group-item d-flex align-items-center">
             <div class="flex-grow-1">
-              {% trans trimmed n=releaseinfo.beta.editions.container.release_number %}
+              {% trans trimmed n=releaseinfo.beta.alt.container.release_number %}
               Fedora Container {{n}}: Tarball archive for s390x
               {% endtrans %}
               <span class="badge badge-primary">{% trans trimmed %}Beta!{% endtrans %}</span>
             </div>
             <div>
-              <a class="btn btn-outline-fedora-blue ml-1" href="{{dl(releaseinfo.beta.editions.container.download_override.s390x, 'https://download.fedoraproject.org/pub/fedora-secondary/releases/test/%d_Beta/Container/s390x/images/Fedora-Container-Base-%d_Beta-%s.s390x.tar.xz' % (releaseinfo.beta.editions.container.release_number, releaseinfo.beta.editions.container.release_number, releaseinfo.beta.editions.container.rc_version))}}">{% trans trimmed %}Download{% endtrans %}</a>
+              <a class="btn btn-outline-fedora-blue ml-1" href="{{dl(releaseinfo.beta.alt.container.download_override.s390x, 'https://download.fedoraproject.org/pub/fedora-secondary/releases/test/%d_Beta/Container/s390x/images/Fedora-Container-Base-%d_Beta-%s.s390x.tar.xz' % (releaseinfo.beta.alt.container.release_number, releaseinfo.beta.alt.container.release_number, releaseinfo.beta.alt.container.rc_version))}}">{% trans trimmed %}Download{% endtrans %}</a>
             </div>
           </li>
           {% endif %}
@@ -337,65 +337,65 @@
       <div class="col-lg-6 pt-4 pt-lg-0 align-self-center">
         <ul class="list-group">
 
-          {% if releaseinfo.beta.show and releaseinfo.beta.editions.cloud.download_override.qcow2_x86_64 %}
+          {% if releaseinfo.beta.show and releaseinfo.beta.alt.cloud.download_override.qcow2_x86_64 %}
           <li class="list-group-item d-flex align-items-center">
             <div class="flex-grow-1">
-              {% trans trimmed n=releaseinfo.beta.editions.cloud.release_number %}
+              {% trans trimmed n=releaseinfo.beta.alt.cloud.release_number %}
               Fedora {{n}}: x86_64 Qcow2 image
               {% endtrans %}
               <span class="badge badge-primary">{% trans trimmed %}Beta!{% endtrans %}</span>
             </div>
             <div>
-              <a class="btn btn-outline-fedora-blue" href="{{dl(releaseinfo.beta.editions.cloud.download_override.qcow2_x86_64, 'https://download.fedoraproject.org/pub/fedora/linux/releases/test/%d_Beta/Cloud/x86_64/images/Fedora-Cloud-Base-%d_Beta-%s.x86_64.qcow2' % (releaseinfo.beta.editions.cloud.release_number, releaseinfo.beta.editions.cloud.release_number, releaseinfo.beta.editions.cloud.rc_version))}}">{% trans trimmed %}Download{% endtrans %}</a>
+              <a class="btn btn-outline-fedora-blue" href="{{dl(releaseinfo.beta.alt.cloud.download_override.qcow2_x86_64, 'https://download.fedoraproject.org/pub/fedora/linux/releases/test/%d_Beta/Cloud/x86_64/images/Fedora-Cloud-Base-%d_Beta-%s.x86_64.qcow2' % (releaseinfo.beta.alt.cloud.release_number, releaseinfo.beta.alt.cloud.release_number, releaseinfo.beta.alt.cloud.rc_version))}}">{% trans trimmed %}Download{% endtrans %}</a>
             </div>
           </li>
           {% endif %}
 
-          {% if releaseinfo.beta.show and releaseinfo.beta.editions.cloud.download_override.raw_x86_64 %}
+          {% if releaseinfo.beta.show and releaseinfo.beta.alt.cloud.download_override.raw_x86_64 %}
           <li class="list-group-item d-flex align-items-center">
             <div class="flex-grow-1">
-              {% trans trimmed n=releaseinfo.beta.editions.cloud.release_number %}
+              {% trans trimmed n=releaseinfo.beta.alt.cloud.release_number %}
               Fedora {{n}}: x86_64 Raw image
               {% endtrans %}
               <span class="badge badge-primary">{% trans trimmed %}Beta!{% endtrans %}</span>
             </div>
             <div>
-              <a class="btn btn-outline-fedora-blue" href="{{dl(releaseinfo.beta.editions.cloud.download_override.raw_x86_64, 'https://download.fedoraproject.org/pub/fedora/linux/releases/test/%d_Beta/Cloud/x86_64/images/Fedora-Cloud-Base-%d_Beta-%s.x86_64.raw.xz' % (releaseinfo.beta.editions.cloud.release_number, releaseinfo.beta.editions.cloud.release_number, releaseinfo.beta.editions.cloud.rc_version))}}">{% trans trimmed %}Download{% endtrans %}</a>
+              <a class="btn btn-outline-fedora-blue" href="{{dl(releaseinfo.beta.alt.cloud.download_override.raw_x86_64, 'https://download.fedoraproject.org/pub/fedora/linux/releases/test/%d_Beta/Cloud/x86_64/images/Fedora-Cloud-Base-%d_Beta-%s.x86_64.raw.xz' % (releaseinfo.beta.alt.cloud.release_number, releaseinfo.beta.alt.cloud.release_number, releaseinfo.beta.alt.cloud.rc_version))}}">{% trans trimmed %}Download{% endtrans %}</a>
             </div>
           </li>
           {% endif %}
 
-          {% if releaseinfo.beta.show and releaseinfo.beta.editions.cloud.download_override.vagrant_virtualbox_x86_64 %}
+          {% if releaseinfo.beta.show and releaseinfo.beta.alt.cloud.download_override.vagrant_virtualbox_x86_64 %}
           <li class="list-group-item d-flex align-items-center">
             <div class="flex-grow-1">
-              {% trans trimmed n=releaseinfo.beta.editions.cloud.release_number %}
+              {% trans trimmed n=releaseinfo.beta.alt.cloud.release_number %}
               Fedora {{n}}: x86_64 Vagrant VBox image
               {% endtrans %}
               <span class="badge badge-primary">{% trans trimmed %}Beta!{% endtrans %}</span>
             </div>
             <div>
-              <a class="btn btn-outline-fedora-blue" href="{{dl(releaseinfo.beta.editions.cloud.download_override.vagrant_virtualbox_x86_64, 'https://download.fedoraproject.org/pub/fedora/linux/releases/test/%d_Beta/Cloud/x86_64/images/Fedora-Cloud-Base-Vagrant-%d_Beta-%s.x86_64.vagrant-virtualbox.box' % (releaseinfo.beta.editions.cloud.release_number, releaseinfo.beta.editions.cloud.release_number, releaseinfo.beta.editions.cloud.rc_version))}}">{% trans trimmed %}Download{% endtrans %}</a>
+              <a class="btn btn-outline-fedora-blue" href="{{dl(releaseinfo.beta.alt.cloud.download_override.vagrant_virtualbox_x86_64, 'https://download.fedoraproject.org/pub/fedora/linux/releases/test/%d_Beta/Cloud/x86_64/images/Fedora-Cloud-Base-Vagrant-%d_Beta-%s.x86_64.vagrant-virtualbox.box' % (releaseinfo.beta.alt.cloud.release_number, releaseinfo.beta.alt.cloud.release_number, releaseinfo.beta.alt.cloud.rc_version))}}">{% trans trimmed %}Download{% endtrans %}</a>
             </div>
           </li>
           {% endif %}
 
-          {% if releaseinfo.beta.show and releaseinfo.beta.editions.cloud.download_override.vagrant_libvirt_x86_64 %}
+          {% if releaseinfo.beta.show and releaseinfo.beta.alt.cloud.download_override.vagrant_libvirt_x86_64 %}
           <li class="list-group-item d-flex align-items-center">
             <div class="flex-grow-1">
-              {% trans trimmed n=releaseinfo.beta.editions.cloud.release_number %}
+              {% trans trimmed n=releaseinfo.beta.alt.cloud.release_number %}
               Fedora {{n}}: x86_64 Vagrant libvirt image
               {% endtrans %}
               <span class="badge badge-primary">{% trans trimmed %}Beta!{% endtrans %}</span>
             </div>
             <div>
-              <a class="btn btn-outline-fedora-blue" href="{{dl(releaseinfo.beta.editions.cloud.download_override.vagrant_libvirt_x86_64, 'https://download.fedoraproject.org/pub/fedora/linux/releases/test/%d_Beta/Cloud/x86_64/images/Fedora-Cloud-Base-Vagrant-%d_Beta-%s.x86_64.vagrant-libvirt.box' % (releaseinfo.beta.editions.cloud.release_number, releaseinfo.beta.editions.cloud.release_number, releaseinfo.beta.editions.cloud.rc_version))}}">{% trans trimmed %}Download{% endtrans %}</a>
+              <a class="btn btn-outline-fedora-blue" href="{{dl(releaseinfo.beta.alt.cloud.download_override.vagrant_libvirt_x86_64, 'https://download.fedoraproject.org/pub/fedora/linux/releases/test/%d_Beta/Cloud/x86_64/images/Fedora-Cloud-Base-Vagrant-%d_Beta-%s.x86_64.vagrant-libvirt.box' % (releaseinfo.beta.alt.cloud.release_number, releaseinfo.beta.alt.cloud.release_number, releaseinfo.beta.alt.cloud.rc_version))}}">{% trans trimmed %}Download{% endtrans %}</a>
             </div>
           </li>
           {% endif %}
 
           <li class="list-group-item d-flex align-items-center">
             <div class="flex-grow-1">
-              {% trans trimmed n=releaseinfo.beta.editions.cloud.release_number %}
+              {% trans trimmed n=releaseinfo.beta.alt.cloud.release_number %}
               Fedora {{n}}: GP2 HVM AMIs
               {% endtrans %}
               <span class="badge badge-primary">{% trans trimmed %}Beta!{% endtrans %}</span>
@@ -407,7 +407,7 @@
 
           <li class="list-group-item d-flex align-items-center">
             <div class="flex-grow-1">
-              {% trans trimmed n=releaseinfo.beta.editions.cloud.release_number %}
+              {% trans trimmed n=releaseinfo.beta.alt.cloud.release_number %}
               Fedora {{n}}: Standard HVM AMIs
               {% endtrans %}
               <span class="badge badge-primary">{% trans trimmed %}Beta!{% endtrans %}</span>
@@ -442,15 +442,16 @@
       <div class="col-lg-6 pt-4 pt-lg-0 align-self-center">
         <ul class="list-group">
 
-          {% if releaseinfo.beta.editions.everything.download_override.netinst_x86_64 %}
+          {% if releaseinfo.beta.alt.everything.download_override.netinst_x86_64 %}
           <li class="list-group-item d-flex align-items-center">
             <div class="flex-grow-1">
-              {% trans trimmed n=releaseinfo.beta.editions.everything.release_number %}
+              {% trans trimmed n=releaseinfo.beta.alt.everything.release_number %}
               Fedora {{n}}: 64-bit network install image
               {% endtrans %}
+              <span class="badge badge-primary">{% trans trimmed %}Beta!{% endtrans %}</span>
             </div>
             <div>
-              <a class="btn btn-outline-fedora-blue" href="{{dl(releaseinfo.beta.editions.everything.download_override.netinst_x86_64, 'https://download.fedoraproject.org/pub/fedora/linux/releases/test/%d_Beta/Everything/x86_64/iso/Fedora-Everything-netinst-x86_64-%d_Beta-%s.iso' % (releaseinfo.beta.editions.everything.release_number, releaseinfo.beta.editions.everything.release_number, releaseinfo.beta.editions.everything.rc_version))}}">{% trans trimmed %}Download{% endtrans %}</a>
+              <a class="btn btn-outline-fedora-blue" href="{{dl(releaseinfo.beta.alt.everything.download_override.netinst_x86_64, 'https://download.fedoraproject.org/pub/fedora/linux/releases/test/%d_Beta/Everything/x86_64/iso/Fedora-Everything-netinst-x86_64-%d_Beta-%s.iso' % (releaseinfo.beta.alt.everything.release_number, releaseinfo.beta.alt.everything.release_number, releaseinfo.beta.alt.everything.rc_version))}}">{% trans trimmed %}Download{% endtrans %}</a>
             </div>
           </li>
           {% endif %}

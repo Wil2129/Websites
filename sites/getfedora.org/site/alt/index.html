@@ -1,6 +1,6 @@
 {% extends "master_getfedora.html" %}
 
-{% from "submenu.html" import submenu with context %}
+{% from "export_regulations.html" import export_regulations with context %}
 {% from "alt_menu.html" import alt_menu with context %}
 
 {% block title %}{% trans trimmed %}Fedora Alternative Downloads{% endtrans %}{% endblock %}
@@ -20,7 +20,7 @@
   </div>
 </div>
 
-  <div class="bg-tranparent py-5">
+  <div class="bg-tranparent pb-5">
     <div class="container">
       <div class="row align-items-center justify-content-center">
         <div class="col-12 col-md-7 col-lg-6 order-12 order-lg-1 text-center text-md-left">
@@ -70,15 +70,15 @@
         <div class="col-lg-6 pt-4 pt-lg-0 align-self-center">
           <ul class="list-group">
 
-            {% if releaseinfo.ga.editions.server.download_override.netinst_x86_64 %}
+            {% if releaseinfo.ga.alt.server.download_override.netinst_x86_64 %}
             <li class="list-group-item d-flex align-items-center">
               <div class="flex-grow-1">
-                {% trans trimmed n=releaseinfo.ga.editions.server.release_number %}
+                {% trans trimmed n=releaseinfo.ga.alt.server.release_number %}
                 Fedora {{n}}: Netinstall ISO image for x86_64
                 {% endtrans %}
               </div>
               <div>
-                <a class="btn btn-outline-fedora-blue" href="{{dl(releaseinfo.ga.editions.server.download_override.netinst_x86_64, 'https://download.fedoraproject.org/pub/fedora/linux/releases/%d/Server/x86_64/iso/Fedora-Server-netinst-x86_64-%d-%s.iso' % (releaseinfo.ga.editions.server.release_number, releaseinfo.ga.editions.server.release_number, releaseinfo.ga.editions.server.rc_version))}}">{% trans trimmed %}Download{% endtrans %}</a>
+                <a class="btn btn-outline-fedora-blue" href="{{dl(releaseinfo.ga.alt.server.download_override.netinst_x86_64, 'https://download.fedoraproject.org/pub/fedora/linux/releases/%d/Server/x86_64/iso/Fedora-Server-netinst-x86_64-%d-%s.iso' % (releaseinfo.ga.alt.server.release_number, releaseinfo.ga.alt.server.release_number, releaseinfo.ga.alt.server.rc_version))}}">{% trans trimmed %}Download{% endtrans %}</a>
               </div>
             </li>
             {% endif %}
@@ -165,15 +165,15 @@
         <div class="col-lg-6 pt-4 pt-lg-0 align-self-center">
           <ul class="list-group">
 
-            {% if releaseinfo.ga.editions.everything.download_override.netinst_x86_64 %}
+            {% if releaseinfo.ga.alt.everything.download_override.netinst_x86_64 %}
             <li class="list-group-item d-flex align-items-center">
               <div class="flex-grow-1">
-                {% trans trimmed n=releaseinfo.ga.editions.everything.release_number %}
+                {% trans trimmed n=releaseinfo.ga.alt.everything.release_number %}
                 Fedora {{n}}: 64-bit network install image
                 {% endtrans %}
               </div>
               <div>
-                <a class="btn btn-outline-fedora-blue" href="{{dl(releaseinfo.ga.editions.everything.download_override.netinst_x86_64, 'https://download.fedoraproject.org/pub/fedora/linux/releases/%d/Everything/x86_64/iso/Fedora-Everything-netinst-x86_64-%d-%s.iso' % (releaseinfo.ga.editions.everything.release_number, releaseinfo.ga.editions.everything.release_number, releaseinfo.ga.editions.everything.rc_version))}}">{% trans trimmed %}Download{% endtrans %}</a>
+                <a class="btn btn-outline-fedora-blue" href="{{dl(releaseinfo.ga.alt.everything.download_override.netinst_x86_64, 'https://download.fedoraproject.org/pub/fedora/linux/releases/%d/Everything/x86_64/iso/Fedora-Everything-netinst-x86_64-%d-%s.iso' % (releaseinfo.ga.alt.everything.release_number, releaseinfo.ga.alt.everything.release_number, releaseinfo.ga.alt.everything.rc_version))}}">{% trans trimmed %}Download{% endtrans %}</a>
               </div>
             </li>
             {% endif %}
@@ -243,5 +243,5 @@
       </div>
     </div>
   </div>
-
+{{export_regulations()}}
 {% endblock %}
