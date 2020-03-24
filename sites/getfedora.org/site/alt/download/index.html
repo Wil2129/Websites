@@ -1,0 +1,376 @@
+{% extends "master_getfedora.html" %}
+
+{% from "alt_menu.html" import alt_menu with context %}
+{% from "export_regulations.html" import export_regulations %}
+
+{% block title %}{% trans trimmed %}Fedora Alternate Architectures{% endtrans %}{% endblock %}
+
+{% block content %}
+{{alt_menu(active="download")}}
+<div class="bg-tranparent py-5">
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-12">
+        <h1 class="font-weight-light">{% trans trimmed %}Alternate Architectures{% endtrans %}</h1>
+        <h5 class="font-weight-light">{% trans trimmed %}Additional architectures supported by Fedora{% endtrans %}</h5>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="bg-gray-200 border py-5">
+  <div class="container">
+    <div class="row">
+      <div class="col-12 mb-3">
+        <h3 class="font-weight-light text-center mb-3">{% trans trimmed %}ARM® aarch64 Architecture{% endtrans %}</h3>
+        <p class="font-weight-light text-center">
+          {% trans trimmed %}
+          These images are for use with AArch64 “Server Base System Architecture” (SBSA) compliant systems or Single Board Computers.
+          {% endtrans %}
+      </p>
+      </div>
+      <div class="col-12">
+        <ul class="list-group">
+
+          {% if releaseinfo.ga.editions.server.download_override.standard_aarch64 %}
+            <li class="list-group-item d-flex align-items-center">
+              <div class="flex-grow-1">
+                {% trans trimmed n=releaseinfo.ga.editions.server.release_number %}
+                Fedora Server {{n}}: Standard ISO image for aarch64
+                {% endtrans %}
+              </div>
+              <div>
+                <a class="btn btn-outline-fedora-blue" href="{{dl(releaseinfo.ga.editions.server.download_override.standard_aarch64, 'https://download.fedoraproject.org/pub/fedora/linux/releases/%d/Server/aarch64/iso/Fedora-Server-dvd-aarch64-%d-%s.iso' % (releaseinfo.ga.editions.server.release_number, releaseinfo.ga.editions.server.release_number, releaseinfo.ga.editions.server.rc_version))}}">{% trans trimmed %}Download{% endtrans %}</a>
+              </div>
+            </li>
+            {% endif %}
+
+            {% if releaseinfo.ga.editions.server.download_override.netinst_aarch64 %}
+            <li class="list-group-item d-flex align-items-center">
+              <div class="flex-grow-1">
+                {% trans trimmed n=releaseinfo.ga.editions.server.release_number %}
+                Fedora Server {{n}}: Netinstall ISO image for aarch64
+                {% endtrans %}
+              </div>
+              <div>
+                <a class="btn btn-outline-fedora-blue" href="{{dl(releaseinfo.ga.editions.server.download_override.netinst_aarch64, 'https://download.fedoraproject.org/pub/fedora/linux/releases/%d/Server/aarch64/iso/Fedora-Server-netinst-aarch64-%d-%s.iso' % (releaseinfo.ga.editions.server.release_number, releaseinfo.ga.editions.server.release_number, releaseinfo.ga.editions.server.rc_version))}}">{% trans trimmed %}Download{% endtrans %}</a>
+              </div>
+            </li>
+            {% endif %}
+
+            {% if releaseinfo.ga.editions.workstation.download_override.netinst_aarch64 %}
+              <li class="list-group-item d-flex align-items-center">
+                <div class="flex-grow-1">
+                  {% trans trimmed n=releaseinfo.ga.editions.workstation.release_number %}
+                  Fedora Workstation {{n}}: Raw image for aarch64
+                  {% endtrans %}
+                </div>
+                <div class="btn-group">
+                  <a class="btn btn-outline-fedora-blue" href="{{dl(releaseinfo.ga.editions.workstation.download_override.netinst_aarch64, 'https://download.fedoraproject.org/pub/fedora-secondary/releases/%d/Workstation/aarch64/images/Fedora-Workstation-%d-%s.aarch64.raw.xz' % (releaseinfo.ga.editions.workstation.release_number, releaseinfo.ga.editions.workstation.release_number, releaseinfo.ga.editions.workstation.rc_version))}}">
+                    {% trans trimmed %}Download{% endtrans %}
+                  </a>
+                </div>
+              </li>
+              {% endif %}
+
+              {% if releaseinfo.ga.editions.minimal.download_override.raw_aarch64 %}
+              <li class="list-group-item d-flex align-items-center">
+                <div class="flex-grow-1">
+                  {% trans trimmed n=releaseinfo.ga.editions.minimal.release_number %}
+                  Fedora Minimal {{n}}: Raw image for aarch64
+                  {% endtrans %}
+                </div>
+                <div class="btn-group">
+                  <a class="btn btn-outline-fedora-blue" href="{{dl(releaseinfo.ga.editions.minimal.download_override.raw_aarch64, 'https://download.fedoraproject.org/pub/fedora-secondary/releases/%d/Spins/aarch64/images/Fedora-Minimal-%d-%s.aarch64.raw.xz' % (releaseinfo.ga.editions.minimal.release_number, releaseinfo.ga.editions.minimal.release_number, releaseinfo.ga.editions.minimal.rc_version))}}">
+                    {% trans trimmed %}Download{% endtrans %}
+                  </a>
+                </div>
+              </li>
+              {% endif %}
+
+            {% if releaseinfo.ga.editions.everything.download_override.netinst_aarch64 %}
+            <li class="list-group-item d-flex align-items-center">
+              <div class="flex-grow-1">
+                {% trans trimmed n=releaseinfo.ga.editions.everything.release_number %}
+                Fedora Everything {{n}}: 64-bit Network install image for aarch64
+                {% endtrans %}
+              </div>
+              <div>
+                <a class="btn btn-outline-fedora-blue" href="{{dl(releaseinfo.ga.editions.everything.download_override.netinst_aarch64, 'https://download.fedoraproject.org/pub/fedora/linux/releases/%d/Everything/aarch64/iso/Fedora-Everything-netinst-aarch64-%d-%s.iso' % (releaseinfo.ga.editions.everything.release_number, releaseinfo.ga.editions.everything.release_number, releaseinfo.ga.editions.everything.rc_version))}}">{% trans trimmed %}Download{% endtrans %}</a>
+              </div>
+            </li>
+            {% endif %}
+
+          {% if releaseinfo.ga.editions.cloud.download_override.qcow2_aarch64 %}
+          <li class="list-group-item d-flex align-items-center">
+            <div class="flex-grow-1">
+              {% trans trimmed n=releaseinfo.ga.editions.cloud.release_number %}
+              Fedora Cloud {{n}}: Qcow2 image for aarch64
+              {% endtrans %}
+            </div>
+            <div>
+              <a class="btn btn-outline-fedora-blue" href="{{dl(releaseinfo.ga.editions.cloud.download_override.qcow2_aarch64, 'https://download.fedoraproject.org/pub/fedora/linux/releases/%d/Cloud/aarch64/images/Fedora-Cloud-Base-%d-%s.aarch64.qcow2' % (releaseinfo.ga.editions.cloud.release_number, releaseinfo.ga.editions.cloud.release_number, releaseinfo.ga.editions.cloud.rc_version))}}">{% trans trimmed %}Download{% endtrans %}</a>
+            </div>
+          </li>
+          {% endif %}
+
+          {% if releaseinfo.ga.editions.cloud.download_override.raw_aarch64 %}
+          <li class="list-group-item d-flex align-items-center">
+            <div class="flex-grow-1">
+              {% trans trimmed n=releaseinfo.ga.editions.cloud.release_number %}
+              Fedora Cloud {{n}}: Raw image for aarch64
+              {% endtrans %}
+            </div>
+            <div>
+              <a class="btn btn-outline-fedora-blue" href="{{dl(releaseinfo.ga.editions.cloud.download_override.raw_aarch64, 'https://download.fedoraproject.org/pub/fedora/linux/releases/%d/Cloud/aarch64/images/Fedora-Cloud-Base-%d-%s.aarch64.raw.xz' % (releaseinfo.ga.editions.cloud.release_number, releaseinfo.ga.editions.cloud.release_number, releaseinfo.ga.editions.cloud.rc_version))}}">{% trans trimmed %}Download{% endtrans %}</a>
+            </div>
+          </li>
+          {% endif %}
+
+          {% if releaseinfo.ga.editions.container.download_override.aarch64 %}
+          <li class="list-group-item d-flex align-items-center">
+            <div class="flex-grow-1">
+              {% trans trimmed n=releaseinfo.ga.editions.container.release_number %}
+              Fedora Container {{n}}: Tarball archive for aarch64
+              {% endtrans %}
+            </div>
+            <div>
+              <a class="btn btn-outline-fedora-blue" href="{{dl(releaseinfo.ga.editions.container.download_override.aarch64, 'https://download.fedoraproject.org/pub/fedora/linux/releases/%d/Container/aarch64/images/Fedora-Container-Base-%d-%s.aarch64.tar.xz' % (releaseinfo.ga.editions.container.release_number, releaseinfo.ga.editions.container.release_number, releaseinfo.ga.editions.container.rc_version))}}">{% trans trimmed %}Download{% endtrans %}</a>
+            </div>
+          </li>
+          {% endif %}
+
+        </ul>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-12 mt-4 text-center text-lg-right">
+        <a href="{{url_for('security', lang_code=lang_code)}}">
+          {% trans trimmed %}
+          Verify your download.
+          {% endtrans %}
+        </a>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<div class="bg-light border py-5">
+  <div class="container">
+    <div class="row">
+      <div class="col-12 mb-3">
+        <h3 class="font-weight-light text-center mb-3">{% trans trimmed %}Power Architecture{% endtrans %}</h3>
+        <p class="font-weight-light text-center">
+          {% trans trimmed %}
+          PPC64LE images are for installation on IBM Power systems or OpenPOWER systems.
+          {% endtrans %}
+      </p>
+      </div>
+      <div class="col-12">
+        <ul class="list-group">
+
+          {% if releaseinfo.ga.editions.server.download_override.standard_ppc64le %}
+            <li class="list-group-item d-flex align-items-center">
+              <div class="flex-grow-1">
+                {% trans trimmed n=releaseinfo.ga.editions.server.release_number %}
+                Fedora Server {{n}}: Standard ISO image for PowerPC
+                {% endtrans %}
+              </div>
+              <div>
+                <a class="btn btn-outline-fedora-blue" href="{{dl(releaseinfo.ga.editions.server.download_override.standard_ppc64le, 'https://download.fedoraproject.org/pub/fedora-secondary/releases/%d/Server/ppc64le/iso/Fedora-Server-dvd-ppc64le-%d-%s.iso' % (releaseinfo.ga.editions.server.release_number, releaseinfo.ga.editions.server.release_number, releaseinfo.ga.editions.server.rc_version))}}">{% trans trimmed %}Download{% endtrans %}</a>
+              </div>
+            </li>
+            {% endif %}
+
+            {% if releaseinfo.ga.editions.server.download_override.netinst_ppc64le %}
+            <li class="list-group-item d-flex align-items-center">
+              <div class="flex-grow-1">
+                {% trans trimmed n=releaseinfo.ga.editions.server.release_number %}
+                Fedora Server {{n}}: Netinstall ISO image for PowerPC
+                {% endtrans %}
+              </div>
+              <div>
+                <a class="btn btn-outline-fedora-blue" href="{{dl(releaseinfo.ga.editions.server.download_override.netinst_ppc64le, 'https://download.fedoraproject.org/pub/fedora-secondary/releases/%d/Server/ppc64le/iso/Fedora-Server-netinst-ppc64le-%d-%s.iso' % (releaseinfo.ga.editions.server.release_number, releaseinfo.ga.editions.server.release_number, releaseinfo.ga.editions.server.rc_version))}}">{% trans trimmed %}Download{% endtrans %}</a>
+              </div>
+            </li>
+            {% endif %}
+
+            {% if releaseinfo.ga.editions.everything.download_override.netinst_ppc64le %}
+            <li class="list-group-item d-flex align-items-center">
+              <div class="flex-grow-1">
+                {% trans trimmed n=releaseinfo.ga.editions.everything.release_number %}
+                Fedora Everything {{n}}: 64-bit Network install image for PowerPC
+                {% endtrans %}
+              </div>
+              <div>
+                <a class="btn btn-outline-fedora-blue" href="{{dl(releaseinfo.ga.editions.everything.download_override.netinst_ppc64le, 'https://download.fedoraproject.org/pub/fedora-secondary/releases/%d/Everything/ppc64le/iso/Fedora-Everything-netinst-ppc64le-%d-%s.iso' % (releaseinfo.ga.editions.everything.release_number, releaseinfo.ga.editions.everything.release_number, releaseinfo.ga.editions.everything.rc_version))}}">{% trans trimmed %}Download{% endtrans %}</a>
+              </div>
+            </li>
+            {% endif %}
+
+          {% if releaseinfo.ga.editions.cloud.download_override.qcow2_ppc64le %}
+          <li class="list-group-item d-flex align-items-center">
+            <div class="flex-grow-1">
+              {% trans trimmed n=releaseinfo.ga.editions.cloud.release_number %}
+              Fedora Cloud {{n}}: Qcow2 image for PowerPC
+              {% endtrans %}
+            </div>
+            <div>
+              <a class="btn btn-outline-fedora-blue" href="{{dl(releaseinfo.ga.editions.cloud.download_override.qcow2_ppc64le, 'https://download.fedoraproject.org/pub/fedora-secondary/releases/%d/Cloud/ppc64le/images/Fedora-Cloud-Base-%d-%s.ppc64le.qcow2' % (releaseinfo.ga.editions.cloud.release_number, releaseinfo.ga.editions.cloud.release_number, releaseinfo.ga.editions.cloud.rc_version))}}">{% trans trimmed %}Download{% endtrans %}</a>
+            </div>
+          </li>
+          {% endif %}
+
+          {% if releaseinfo.ga.editions.cloud.download_override.raw_ppc64le %}
+          <li class="list-group-item d-flex align-items-center">
+            <div class="flex-grow-1">
+              {% trans trimmed n=releaseinfo.ga.editions.cloud.release_number %}
+              Fedora Cloud {{n}}: Raw image for PowerPC
+              {% endtrans %}
+            </div>
+            <div>
+              <a class="btn btn-outline-fedora-blue" href="{{dl(releaseinfo.ga.editions.cloud.download_override.raw_ppc64le, 'https://download.fedoraproject.org/pub/fedora-secondary/releases/%d/Cloud/ppc64le/images/Fedora-Cloud-Base-%d-%s.ppc64le.raw.xz' % (releaseinfo.ga.editions.cloud.release_number, releaseinfo.ga.editions.cloud.release_number, releaseinfo.ga.editions.cloud.rc_version))}}">{% trans trimmed %}Download{% endtrans %}</a>
+            </div>
+          </li>
+          {% endif %}
+
+          {% if releaseinfo.ga.editions.container.download_override.ppc64le %}
+          <li class="list-group-item d-flex align-items-center">
+            <div class="flex-grow-1">
+              {% trans trimmed n=releaseinfo.ga.editions.container.release_number %}
+              Fedora Container {{n}}: Tarball archive for PowerPC
+              {% endtrans %}
+            </div>
+            <div>
+              <a class="btn btn-outline-fedora-blue" href="{{dl(releaseinfo.ga.editions.container.download_override.ppc64le, 'https://download.fedoraproject.org/pub/fedora-secondary/releases/%d/Container/ppc64le/images/Fedora-Container-Base-%d-%s.ppc64le.tar.xz' % (releaseinfo.ga.editions.container.release_number, releaseinfo.ga.editions.container.release_number, releaseinfo.ga.editions.container.rc_version))}}">{% trans trimmed %}Download{% endtrans %}</a>
+            </div>
+          </li>
+          {% endif %}
+
+        </ul>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-12 mt-4 text-center text-lg-right">
+        <a href="{{url_for('security', lang_code=lang_code)}}">
+          {% trans trimmed %}
+          Verify your download.
+          {% endtrans %}
+        </a>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<div class="bg-gray-200 border py-5">
+  <div class="container">
+    <div class="row">
+      <div class="col-12 mb-3">
+        <h3 class="font-weight-light text-center mb-3">{% trans trimmed %}s390x Architecture{% endtrans %}</h3>
+        <p class="font-weight-light text-center">
+          {% trans trimmed %}
+          If you want to install Fedora on IBM z Systems, then you are looking for this architecture.
+          {% endtrans %}
+      </p>
+      </div>
+      <div class="col-12">
+        <ul class="list-group">
+
+          {% if releaseinfo.ga.editions.server.download_override.standard_s390x %}
+            <li class="list-group-item d-flex align-items-center">
+              <div class="flex-grow-1">
+                {% trans trimmed n=releaseinfo.ga.editions.server.release_number %}
+                Fedora Server {{n}}: Standard ISO image for s390x
+                {% endtrans %}
+              </div>
+              <div>
+                <a class="btn btn-outline-fedora-blue" href="{{dl(releaseinfo.ga.editions.server.download_override.standard_s390x, 'https://download.fedoraproject.org/pub/fedora-secondary/releases/%d/Server/s390x/iso/Fedora-Server-dvd-s390x-%d-%s.iso' % (releaseinfo.ga.editions.server.release_number, releaseinfo.ga.editions.server.release_number, releaseinfo.ga.editions.server.rc_version))}}">{% trans trimmed %}Download{% endtrans %}</a>
+              </div>
+            </li>
+            {% endif %}
+
+            {% if releaseinfo.ga.editions.server.download_override.netinst_s390x %}
+            <li class="list-group-item d-flex align-items-center">
+              <div class="flex-grow-1">
+                {% trans trimmed n=releaseinfo.ga.editions.server.release_number %}
+                Fedora Server {{n}}: Netinstall ISO image for s390x
+                {% endtrans %}
+              </div>
+              <div>
+                <a class="btn btn-outline-fedora-blue" href="{{dl(releaseinfo.ga.editions.server.download_override.netinst_s390x, 'https://download.fedoraproject.org/pub/fedora-secondary/releases/%d/Server/s390x/iso/Fedora-Server-netinst-s390x-%d-%s.iso' % (releaseinfo.ga.editions.server.release_number, releaseinfo.ga.editions.server.release_number, releaseinfo.ga.editions.server.rc_version))}}">{% trans trimmed %}Download{% endtrans %}</a>
+              </div>
+            </li>
+            {% endif %}
+
+            {% if releaseinfo.ga.editions.everything.download_override.netinst_s390x %}
+            <li class="list-group-item d-flex align-items-center">
+              <div class="flex-grow-1">
+                {% trans trimmed n=releaseinfo.ga.editions.everything.release_number %}
+                Fedora Everything {{n}}: 64-bit Network install image for s390x
+                {% endtrans %}
+              </div>
+              <div>
+                <a class="btn btn-outline-fedora-blue" href="{{dl(releaseinfo.ga.editions.everything.download_override.netinst_s390x, 'https://download.fedoraproject.org/pub/fedora-secondary/releases/%d/Everything/s390x/iso/Fedora-Everything-netinst-s390x-%d-%s.iso' % (releaseinfo.ga.editions.everything.release_number, releaseinfo.ga.editions.everything.release_number, releaseinfo.ga.editions.everything.rc_version))}}">{% trans trimmed %}Download{% endtrans %}</a>
+              </div>
+            </li>
+            {% endif %}
+
+          {% if releaseinfo.ga.editions.cloud.download_override.qcow2_s390x %}
+          <li class="list-group-item d-flex align-items-center">
+            <div class="flex-grow-1">
+              {% trans trimmed n=releaseinfo.ga.editions.cloud.release_number %}
+              Fedora Cloud {{n}}: Qcow2 image for s390x
+              {% endtrans %}
+            </div>
+            <div>
+              <a class="btn btn-outline-fedora-blue" href="{{dl(releaseinfo.ga.editions.cloud.download_override.qcow2_s390x, 'https://download.fedoraproject.org/pub/fedora-secondary/releases/%d/Cloud/s390x/images/Fedora-Cloud-Base-%d-%s.s390x.qcow2' % (releaseinfo.ga.editions.cloud.release_number, releaseinfo.ga.editions.cloud.release_number, releaseinfo.ga.editions.cloud.rc_version))}}">{% trans trimmed %}Download{% endtrans %}</a>
+            </div>
+          </li>
+          {% endif %}
+
+          {% if releaseinfo.ga.editions.cloud.download_override.raw_s390x %}
+          <li class="list-group-item d-flex align-items-center">
+            <div class="flex-grow-1">
+              {% trans trimmed n=releaseinfo.ga.editions.cloud.release_number %}
+              Fedora Cloud {{n}}: Raw image for s390x
+              {% endtrans %}
+            </div>
+            <div>
+              <a class="btn btn-outline-fedora-blue" href="{{dl(releaseinfo.ga.editions.cloud.download_override.raw_s390x, 'https://download.fedoraproject.org/pub/fedora-secondary/releases/%d/Cloud/s390x/images/Fedora-Cloud-Base-%d-%s.s390x.raw.xz' % (releaseinfo.ga.editions.cloud.release_number, releaseinfo.ga.editions.cloud.release_number, releaseinfo.ga.editions.cloud.rc_version))}}">{% trans trimmed %}Download{% endtrans %}</a>
+            </div>
+          </li>
+          {% endif %}
+
+          {% if releaseinfo.ga.editions.container.download_override.s390x %}
+          <li class="list-group-item d-flex align-items-center">
+            <div class="flex-grow-1">
+              {% trans trimmed n=releaseinfo.ga.editions.container.release_number %}
+              Fedora Container {{n}}: Tarball archive for s390x
+              {% endtrans %}
+            </div>
+            <div>
+              <a class="btn btn-outline-fedora-blue" href="{{dl(releaseinfo.ga.editions.container.download_override.s390x, 'https://download.fedoraproject.org/pub/fedora-secondary/releases/%d/Container/s390x/images/Fedora-Container-Base-%d-%s.s390x.tar.xz' % (releaseinfo.ga.editions.container.release_number, releaseinfo.ga.editions.container.release_number, releaseinfo.ga.editions.container.rc_version))}}">{% trans trimmed %}Download{% endtrans %}</a>
+            </div>
+          </li>
+          {% endif %}
+
+        </ul>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-12 mt-4 text-center text-lg-right">
+        <a href="{{url_for('security', lang_code=lang_code)}}">
+          {% trans trimmed %}
+          Verify your download.
+          {% endtrans %}
+        </a>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+{{export_regulations()}}
+{% endblock %}

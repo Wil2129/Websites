@@ -223,6 +223,8 @@ export_route('security', '/security/')
 export_route('sponsors', '/sponsors/')
 export_route('alt', '/alt/')
 export_route('alt_download', '/alt/download/')
+export_route('alt_prerelease', '/alt/prerelease/')
+export_route('alt_cloud', '/alt/cloud/')
 
 # This is manually updated for now by calling:
 # python scripts/releases-json.py > static/releases.json
